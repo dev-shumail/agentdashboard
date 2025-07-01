@@ -159,13 +159,27 @@
       <div class="bg-white border-grey-seven border px-4 py-2 rounded mt-3">
         <div class="flex justify-between">
           <!-- Search field starts-->
-          <div>
+          <div class="flex items-center gap-x-2">
             <input
               type="search"
               name="search"
               class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded"
               placeholder="Search"
             />
+
+            <button
+              class="bg-[#65b211] px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-[#65b211] hover:bg-transparent hover:text-[#65b211] transition-all duration-300"
+            >
+              Download Stock List
+            </button>
+
+            <button
+              class="bg-[#1890ff] px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-[#1890ff] hover:bg-transparent hover:text-[#1890ff] transition-all duration-300"
+            >
+              Copy Links
+            </button>
+
+            <p class="text-primary-color font-semibold">10 cars selected</p>
           </div>
 
           <!-- Search field ends here -->
