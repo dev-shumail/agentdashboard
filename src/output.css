@@ -40,6 +40,8 @@
     --color-primary-color: #173559;
     --color-grey-three: #555555;
     --color-secondary-color: #f6bb3b;
+    --color-green-color: #65b211;
+    --color-blue-color: #1890ff;
   }
 }
 @layer base {
@@ -440,10 +442,6 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-none {
-    --tw-border-style: none;
-    border-style: none;
-  }
   .border-\[\#65b211\] {
     border-color: #65b211;
   }
@@ -452,6 +450,12 @@
   }
   .border-\[\#d9d9d9\] {
     border-color: #d9d9d9;
+  }
+  .border-blue-color {
+    border-color: var(--color-blue-color);
+  }
+  .border-green-color {
+    border-color: var(--color-green-color);
   }
   .border-grey-seven {
     border-color: var(--color-grey-seven);
@@ -462,9 +466,6 @@
   .border-primary-color {
     border-color: var(--color-primary-color);
   }
-  .bg-\[\#\#1890ff\] {
-    background-color: ##1890ff;
-  }
   .bg-\[\#65b211\] {
     background-color: #65b211;
   }
@@ -474,8 +475,14 @@
   .bg-\[\#1735591a\] {
     background-color: #1735591a;
   }
+  .bg-blue-color {
+    background-color: var(--color-blue-color);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-green-color {
+    background-color: var(--color-green-color);
   }
   .bg-grey-eight {
     background-color: var(--color-grey-eight);
@@ -710,32 +717,10 @@
       color: var(--color-grey-six);
     }
   }
-  .hover\:border {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
-      }
-    }
-  }
-  .hover\:border-\[\#65b211\] {
-    &:hover {
-      @media (hover: hover) {
-        border-color: #65b211;
-      }
-    }
-  }
   .hover\:bg-transparent {
     &:hover {
       @media (hover: hover) {
         background-color: transparent;
-      }
-    }
-  }
-  .hover\:bg-none {
-    &:hover {
-      @media (hover: hover) {
-        background-image: none;
       }
     }
   }
@@ -750,6 +735,20 @@
     &:hover {
       @media (hover: hover) {
         color: #1890ff;
+      }
+    }
+  }
+  .hover\:text-blue-color {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-color);
+      }
+    }
+  }
+  .hover\:text-green-color {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-color);
       }
     }
   }
