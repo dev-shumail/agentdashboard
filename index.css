@@ -32,8 +32,10 @@ label {
   user-select: none;
   position: relative;
 }
-.custom-checkbox {
+.custom-checkbox,
+.form-checkbox {
   margin-top: 10px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
