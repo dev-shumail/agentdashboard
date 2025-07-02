@@ -140,13 +140,233 @@
 
     <!-- Content Section Starts here -->
 
-    <div class="bg-grey-eight px-4">
-      <div class="grid grid-cols-6 gap-x-4 py-4">
-        <div class="border border-grey-seven bg-white shadow-sm">
-          <p>Shumail</p>
+    <div class="bg-grey-eight px-4 py-2 h-screen">
+      <div class="flex justify-between">
+        <div>
+          <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
+          <p class="text-base text-grey-two font-normal">
+            Fast. Reliable. Hassle-Free Vehicle Shipping.
+          </p>
         </div>
-        <div class="col-span-5 border border-grey-seven bg-white shadow-sm">
-          <p>Testing</p>
+        <div
+          class="bg-[#1735591a] border-2 rounded flex items-center px-3 border-primary-color"
+        >
+          <p class="font-extrabold text-primary-color text-xl">
+            Total Result: 350
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-6 gap-x-4 py-4">
+        <div
+          class="col-span-2 xl:col-span-1 border border-grey-seven bg-white shadow-sm px-3 py-2"
+        >
+          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
+
+          <label
+            for="searchCarByRef"
+            class="text-grey-two text-sm mt-3 font-light"
+            >Search by Ref. No</label
+          >
+          <input
+            type="text"
+            placeholder="Ref No."
+            class="placeholder:text-grey-six w-full text-grey-three mt-0.5 rounded text-sm outline-none border border-grey-six pl-2 py-0.5"
+          />
+          <div class="flex flex-col gap-2 mt-4">
+            <!-- Add Reference numbers -->
+            <div
+              class="flex justify-between items-center rounded px-2 bg-[#c5303026] py-0.5"
+            >
+              <p class="text-sm font-semibold text-red-700">OX276151</p>
+
+              <button class="text-red-700 text-lg cursor-pointer">
+                &times;
+              </button>
+            </div>
+
+            <!-- Reference numbers end-->
+            <button
+              class="text-sm bg-secondary-color text-primary-color font-normal rounded py-2 cursor-pointer"
+            >
+              Add More
+            </button>
+          </div>
+        </div>
+
+        <!-- 2nd grid starts -->
+        <div
+          class="col-span-4 xl:col-span-5 border border-grey-seven bg-white shadow-sm px-3 py-2"
+        >
+          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
+
+          <label for="searchCstmrEmail" class="text-sm text-grey-two mt-3"
+            >Email:</label
+          >
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Search customer by email"
+            class="border border-grey-six rounded text-sm w-64 py-1 pl-3 placeholder:text-grey-six text-grey-three outline-none placeholder:font-light"
+          />
+
+          <button
+            class="px-5 border border-primary-color bg-primary-color text-white rounded py-1 cursor-pointer mt-0.5 text-sm"
+          >
+            Search
+          </button>
+
+          <!-- Customer Summary Section Start -->
+          <div
+            class="bg-[#f3f5f6] w-full rounded border border-grey-six mt-3 px-3 py-2"
+          >
+            <p
+              class="text-grey-two font-semibold pb-2 border-b border-b-[#e8e7e7]"
+            >
+              Customer Summary
+            </p>
+            <div class="flex flex-col md:flex-row gap-x-3 mt-2">
+              <div class="w-full">
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Purchased
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0 car's
+                  </p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Issued PI
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">2</p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Percentage Booking Rate
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00%
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Avg. $Discount
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00 USD
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Credit Sales
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    Not Approved
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Last Purchased Date
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    None
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Deposit
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00 USD
+                  </p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Customer Bank
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">NW</p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Reservation Period
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    48 hrs (Default)
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    PI Discard Rate
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">0%</p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Sub Rep
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    None
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    PayPal
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    Enable
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Summary Section End -->
+          <form class="mt-3">
+            <div class="grid grid-cols-3">
+              <!-- customer name starts -->
+              <div>
+                <label for="cstmrName" class="text-sm text-grey-two"
+                  >Customer Name <span class="text-red-700">*</span>
+                </label>
+                <input type="text" placeholder="Enter Customer Name" class="border border-grey-six" />
+              </div>
+              <!-- Customer name ends here -->
+            </div>
+            <div></div>
+          </form>
         </div>
       </div>
     </div>
