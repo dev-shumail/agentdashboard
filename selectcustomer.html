@@ -135,11 +135,12 @@
         </ul>
       </div>
     </nav>
+
     <!-- Navbar Ends here -->
 
-    <!-- Content Section Starts Here -->
+    <!-- Content Section Starts here -->
+
     <div class="bg-grey-eight px-4 py-2 h-screen">
-      <!-- Import your car starts -->
       <div class="flex justify-between">
         <div>
           <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
@@ -155,429 +156,222 @@
           </p>
         </div>
       </div>
-      <!-- Import your car end -->
-      <div class="bg-white border-grey-seven border px-4 py-2 rounded mt-3">
-        <div class="flex justify-between">
-          <!-- Search field starts-->
-          <div class="flex items-center gap-x-2">
-            <input
-              type="search"
-              name="search"
-              class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded"
-              placeholder="Search"
-            />
 
-            <button
-              class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300"
+      <div class="grid grid-cols-6 gap-x-4 py-4">
+        <div
+          class="col-span-2 xl:col-span-1 border border-grey-seven bg-white shadow-sm px-3 py-2"
+        >
+          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
+
+          <label
+            for="searchCarByRef"
+            class="text-grey-two text-sm mt-3 font-light"
+            >Search by Ref. No</label
+          >
+          <input
+            type="text"
+            placeholder="Ref No."
+            class="placeholder:text-grey-six w-full text-grey-three mt-0.5 rounded text-sm outline-none border border-grey-six pl-2 py-0.5"
+          />
+          <div class="flex flex-col gap-2 mt-4">
+            <!-- Add Reference numbers -->
+            <div
+              class="flex justify-between items-center rounded px-2 bg-[#c5303026] py-0.5"
             >
-              Download Stock List
-            </button>
+              <p class="text-sm font-semibold text-red-700">OX276151</p>
 
-            <button
-              class="bg-blue-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-blue-color hover:bg-transparent hover:text-blue-color transition-all duration-300"
-            >
-              Copy Links
-            </button>
-
-            <p class="text-primary-color font-semibold">10 cars selected</p>
-          </div>
-
-          <!-- Search field ends here -->
-
-          <!-- filters start here -->
-
-          <div class="flex gap-x-2">
-            <div class="relative mt-1 w-44">
-              <select
-                name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none"
-              >
-                <option value="" class="text-grey-six text-sm">
-                  20 Rows Displayed
-                </option>
-                <option value="P">Pakistan</option>
-              </select>
-
-              <div
-                class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
-              >
-                <svg
-                  width="8"
-                  height="8"
-                  viewBox="0 0 11 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
-                    fill="#999999"
-                  />
-                </svg>
-              </div>
+              <button class="text-red-700 text-lg cursor-pointer">
+                &times;
+              </button>
             </div>
 
-            <!-- Sort By Filter -->
-            <div class="relative mt-1 w-44">
-              <select
-                name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none"
-              >
-                <option value="" class="text-grey-six text-sm">Sort By</option>
-                <option value="P">Pakistan</option>
-              </select>
+            <!-- Reference numbers end-->
+            <button
+              class="text-sm bg-secondary-color text-primary-color font-normal rounded py-2 cursor-pointer"
+            >
+              Add More
+            </button>
+          </div>
+        </div>
 
-              <div
-                class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
-              >
-                <svg
-                  width="8"
-                  height="8"
-                  viewBox="0 0 11 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+        <!-- 2nd grid starts -->
+        <div
+          class="col-span-4 xl:col-span-5 border border-grey-seven bg-white shadow-sm px-3 py-2"
+        >
+          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
+
+          <label for="searchCstmrEmail" class="text-sm text-grey-two mt-3"
+            >Email:</label
+          >
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Search customer by email"
+            class="border border-grey-six rounded text-sm w-64 py-1 pl-3 placeholder:text-grey-six text-grey-three outline-none placeholder:font-light"
+          />
+
+          <button
+            class="px-5 border border-primary-color bg-primary-color text-white rounded py-1 cursor-pointer mt-0.5 text-sm"
+          >
+            Search
+          </button>
+
+          <!-- Customer Summary Section Start -->
+          <div
+            class="bg-[#f3f5f6] w-full rounded border border-grey-six mt-3 px-3 py-2"
+          >
+            <p
+              class="text-grey-two font-semibold pb-2 border-b border-b-[#e8e7e7]"
+            >
+              Customer Summary
+            </p>
+            <div class="flex flex-col md:flex-row gap-x-3 mt-2">
+              <div class="w-full">
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2"
                 >
-                  <path
-                    d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
-                    fill="#999999"
-                  />
-                </svg>
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Purchased
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0 car's
+                  </p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Issued PI
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">2</p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Percentage Booking Rate
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00%
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Avg. $Discount
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00 USD
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Credit Sales
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    Not Approved
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Last Purchased Date
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    None
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Deposit
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    0.00 USD
+                  </p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Customer Bank
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">NW</p>
+                </div>
+
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Reservation Period
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    48 hrs (Default)
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    PI Discard Rate
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">0%</p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    Sub Rep
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    None
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-b-[#e8e7e7] pb-2 mt-2"
+                >
+                  <p class="w-full text-grey-two font-medium text-[15px]">
+                    PayPal
+                  </p>
+                  <p class="w-full text-[15px] text-grey-two font-light">
+                    Enable
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- filters ends here -->
+
+          <!-- Customer Summary Section End -->
+          <form class="mt-3">
+            <div class="grid grid-cols-3">
+              <!-- customer name starts -->
+              <div>
+                <label for="cstmrName" class="text-sm text-grey-two"
+                  >Customer Name <span class="text-red-700">*</span>
+                </label>
+                <input type="text" placeholder="Enter Customer Name" class="border border-grey-six" />
+              </div>
+              <!-- Customer name ends here -->
+            </div>
+            <div></div>
+          </form>
         </div>
-
-        <!-- Table of Cars Starts here -->
-        <div class="overflow-x-auto w-full mt-3">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-              <tr>
-                <!-- 1: Select All Checkbox -->
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  <label class="custom-checkbox">
-                    <input
-                      id="select-all"
-                      type="checkbox"
-                      class="form-checkbox checkbox h-4 w-4 text-primary-color transition duration-150 ease-in-out"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                </th>
-                <!-- 2: Car Image -->
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Car Image
-                </th>
-                <!-- 3: Reference No. + Make/Model/Code -->
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Reference No.
-                </th>
-                <!-- 4-12: Placeholders -->
-                <th
-                  class="py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Make <br />
-                  Model
-                  <br />
-                  Model Code
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Year <br />
-                  Mileage
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  FOB Price
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Notes
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Sale Icons
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Stock Area <br />
-                  Stock Location
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Auction <br />
-                  Grade
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Release <br />
-                  Days
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
-                >
-                  Actions
-                </th>
-              </tr>
-            </thead>
-            <tbody
-              id="car-table-body"
-              class="bg-white divide-y divide-gray-200"
-            >
-              <!-- Example Row 1 start -->
-              <tr class="transition-colors duration-200">
-                <!-- 1: Row Checkbox -->
-                <td class="px-4 py-2">
-                  <label class="custom-checkbox">
-                    <input
-                      type="checkbox"
-                      class="row-checkbox checkbox form-checkbox h-4 w-4 transition duration-150 ease-in-out"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <!-- 2: Car Image -->
-                <td class="px-4 py-2">
-                  <img
-                    src="assets/SUV.svg"
-                    alt="Car"
-                    class="w-16 h-10 object-contain rounded"
-                  />
-                </td>
-                <!-- 3: Reference No. + Make/Model/Code -->
-                <td class="px-4 py-2">
-                  <div class="text-[#1890ff] font-normal text-[15px]">
-                    <a href="#"> BX289851 </a>
-                  </div>
-                </td>
-                <!-- 4-12: Placeholders -->
-
-                <td>
-                  <div class="text-[13px] flex flex-col">
-                    <span>Toyota</span>
-                    <span>Raize</span>
-                    <span>5BA-A200A (10,924)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>2020/11</span>
-                    <span>40,000 km</span>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>USD</span>
-                    <span class="line-through">10,560</span>
-                    <span class="text-[#15ac40] font-semibold"> 9,390</span>
-                    <span class="text-[#ff0000] font-semibold">Save: 11%</span>
-                  </div>
-                </td>
-
-                <!-- <td class="px-4 py-2">Petrol</td> -->
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>A3キズあり</span>
-                    <span>B3キズ凹みあり</span>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="px-4 py-2 flex flex-col">
-                    <img
-                      src="assets/premierTag.svg"
-                      alt="Sale Icon"
-                      class="w-24 h-6 inline"
-                    />
-                    <img
-                      src="assets/readyTag.svg"
-                      alt="Sale Icon"
-                      class="w-24 h-6 inline"
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div class="px-4 py-2 flex flex-col text-[13px]">
-                    <span> KYUSHU </span>
-                    <span>Kanda (Kandakoun) </span>
-                  </div>
-                </td>
-                <td class="px-4 py-2 text-[13px]">
-                  <span>3.5</span>
-                </td>
-                <td class="px-4 py-2 text-[13px]">
-                  <span>21</span>
-                </td>
-
-                <td class="px-4 py-2 text-[13px]">
-                  <div class="flex gap-x-1">
-                    <a href="#">
-                      <img
-                        src="./assets/galleryIcon.svg"
-                        alt="galleryIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="./assets/auctionIcon.svg"
-                        alt="auctionIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="./assets/checkSheetIcon.svg"
-                        alt="checkSheetIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Example Row 1 end -->
-
-              <!-- Example row 2 starts -->
-
-              <!-- Example Row 1 -->
-              <tr class="transition-colors duration-200">
-                <!-- 1: Row Checkbox -->
-                <td class="px-4 py-2">
-                  <label class="custom-checkbox">
-                    <input
-                      type="checkbox"
-                      class="row-checkbox checkbox form-checkbox h-4 w-4 transition duration-150 ease-in-out"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <!-- 2: Car Image -->
-                <td class="px-4 py-2">
-                  <img
-                    src="assets/SUV.svg"
-                    alt="Car"
-                    class="w-16 h-10 object-contain rounded"
-                  />
-                </td>
-                <!-- 3: Reference No. + Make/Model/Code -->
-                <td class="px-4 py-2">
-                  <div class="text-[#1890ff] font-normal text-[15px]">
-                    <a href="#"> BX289851 </a>
-                  </div>
-                </td>
-                <!-- 4-12: Placeholders -->
-
-                <td>
-                  <div class="text-[13px] flex flex-col">
-                    <span>Toyota</span>
-                    <span>Raize</span>
-                    <span>5BA-A200A (10,924)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>2020/11</span>
-                    <span>40,000 km</span>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>USD</span>
-                    <span class="line-through">10,560</span>
-                    <span class="text-[#15ac40] font-semibold"> 9,390</span>
-                    <span class="text-[#ff0000] font-semibold">Save: 11%</span>
-                  </div>
-                </td>
-
-                <!-- <td class="px-4 py-2">Petrol</td> -->
-                <td>
-                  <div class="px-4 py-2 text-[13px] flex flex-col">
-                    <span>A3キズあり</span>
-                    <span>B3キズ凹みあり</span>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="px-4 py-2 flex flex-col">
-                    <img
-                      src="assets/premierTag.svg"
-                      alt="Sale Icon"
-                      class="w-24 h-6 inline"
-                    />
-                    <img
-                      src="assets/readyTag.svg"
-                      alt="Sale Icon"
-                      class="w-24 h-6 inline"
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div class="px-4 py-2 flex flex-col text-[13px]">
-                    <span> KYUSHU </span>
-                    <span>Kanda (Kandakoun) </span>
-                  </div>
-                </td>
-                <td class="px-4 py-2 text-[13px]">
-                  <span>3.5</span>
-                </td>
-                <td class="px-4 py-2 text-[13px]">
-                  <span>21</span>
-                </td>
-
-                <td class="px-4 py-2 text-[13px]">
-                  <div class="flex gap-x-1">
-                    <a href="#">
-                      <img
-                        src="./assets/galleryIcon.svg"
-                        alt="galleryIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="./assets/auctionIcon.svg"
-                        alt="auctionIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="./assets/checkSheetIcon.svg"
-                        alt="checkSheetIcon"
-                        class="w-5 h-5 cursor-pointer"
-                      />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Example row 2 ends -->
-
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Table of cars ends here -->
       </div>
     </div>
 
-    <!-- Content Section Ends Here -->
+    <!-- Content Section Ends here -->
 
     <!-- Footer Starts here -->
     <footer
@@ -587,7 +381,7 @@
         <div class="flex items-center max-w-4xl">
           <!-- Step 1 -->
           <a
-            href="./index.html"
+            href="#"
             class="flex flex-row active items-center gap-x-1.5 cursor-pointer"
             data-step="1"
           >
@@ -603,12 +397,12 @@
           <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
           <!-- Step 2 -->
           <a
-            href="#"
+            href="./choosecar.html"
             class="flex flex-row items-center gap-x-1.5 cursor-pointer"
             data-step="2"
           >
             <div
-              class="rounded-full bg-primary-color border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
             >
               <p class="text-sm">2</p>
             </div>
@@ -671,7 +465,7 @@
       </div>
       <div class="w-2/3 xl:w-1/3 flex gap-x-4 justify-end">
         <a
-          href="./index.html"
+          href="#"
           class="bg-grey-seven rounded-[5px] px-6 py-2 group text-grey-three"
         >
           <button class="cursor-pointer">Back</button>
@@ -679,21 +473,13 @@
 
         <a
           href="#"
-          class="bg-green-color px-6 py-2 group rounded-[5px] text-white"
-        >
-          <button class="cursor-pointer">Create Quote</button>
-        </a>
-
-        <a
-          href="#"
           class="bg-primary-color px-6 py-2 group rounded-[5px] text-white"
         >
-          <button class="cursor-pointer">Select Customer</button>
+          <button class="cursor-pointer">Search Cars</button>
         </a>
       </div>
     </footer>
 
     <!-- Footer Ends here -->
-    <script src="src/tableSelect.js"></script>
   </body>
 </html>
