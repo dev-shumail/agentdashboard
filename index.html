@@ -1119,7 +1119,7 @@
 
           <!-- Step 3 -->
           <a
-            href="#"
+            href="./selectcustomer.html"
             class="flex flex-row items-center gap-x-1.5 cursor-pointer"
             data-step="3"
           >
@@ -1186,5 +1186,350 @@
     </footer>
 
     <!-- Footer Ends here -->
+
+    <!-- Sidebar Filter Modal -->
+    <div
+      id="sidebarFilterOverlay"
+      class="fixed inset-0 z-50 bg-[#38383880] hidden transition-opacity duration-300"
+      aria-modal="true"
+      role="dialog"
+    >
+      <aside
+        id="sidebarFilter"
+        class="fixed right-0 top-0 h-full w-full max-w-xl bg-white shadow-lg flex flex-col transition-transform duration-300 translate-x-full"
+        tabindex="-1"
+        aria-label="All Filters"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-6 py-4 border-b-2 border-[#d9d9d9]"
+        >
+          <h2 class="text-xl font-semibold text-grey-two">All Filters</h2>
+          <button
+            id="closeSidebarFilter"
+            class="text-4xl cursor-pointer font-normal text-primary-color hover:text-[#c53030] focus:outline-none"
+            aria-label="Close sidebar"
+          >
+            &times;
+          </button>
+        </div>
+        <!-- Tabs -->
+        <nav class="flex border-b border-[#ebe6e7]" role="tablist">
+          <button
+            class="sidebar-tab flex-1 py-3 text-center font-medium focus:outline-none border-b-2 border-primary-color text-primary-color"
+            data-tab="body"
+            role="tab"
+            aria-selected="true"
+          >
+            Body Type
+          </button>
+          <button
+            class="sidebar-tab flex-1 py-3 text-center font-medium focus:outline-none border-b-2 border-transparent text-gray-500"
+            data-tab="discount"
+            role="tab"
+            aria-selected="false"
+          >
+            Discount
+          </button>
+          <button
+            class="sidebar-tab flex-1 py-3 text-center font-medium focus:outline-none border-b-2 border-transparent text-gray-500"
+            data-tab="accessories"
+            role="tab"
+            aria-selected="false"
+          >
+            Accessories
+          </button>
+        </nav>
+        <!-- Tab Panels -->
+        <div class="flex-1 overflow-y-auto">
+          <!-- Body Type Tab -->
+          <section class="sidebar-panel p-6" data-panel="body">
+            <div class="grid grid-cols-4 gap-2">
+              <!-- Example body types, repeat as needed -->
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Hatchback"
+              >
+                <img
+                  src="./assets/HatchBack.svg"
+                  alt="Hatchback"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Hatchback</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Sedan"
+              >
+                <img
+                  src="./assets/Sedan.svg"
+                  alt="Sedan"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Sedan</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="SUV"
+              >
+                <img src="./assets/SUV.svg" alt="SUV" class="w-12 h-12 mb-2" />
+                <span class="text-sm">SUV</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="MPV"
+              >
+                <img src="./assets/MPV.svg" alt="MPV" class="w-12 h-12 mb-2" />
+                <span class="text-sm">MPV</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Coupe"
+              >
+                <img
+                  src="./assets/Copue.svg"
+                  alt="Coupe"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Coupe</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Truck"
+              >
+                <img
+                  src="./assets/Truck.svg"
+                  alt="Truck"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Truck</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Wagon"
+              >
+                <img
+                  src="./assets/Wagon.svg"
+                  alt="Wagon"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Wagon</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Convertible"
+              >
+                <img
+                  src="./assets/Convertible.svg"
+                  alt="Convertible"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Convertible</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Mini Van"
+              >
+                <img
+                  src="./assets/MPV.svg"
+                  alt="Mini Van"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Mini Van</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Mini Vehicle"
+              >
+                <img
+                  src="./assets/MPV.svg"
+                  alt="Mini Vehicle"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Mini Vehicle</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Sporty"
+              >
+                <img
+                  src="./assets/Convertible.svg"
+                  alt="Sporty"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Sporty</span>
+              </button>
+              <button
+                type="button"
+                class="body-type-option flex flex-col cursor-pointer items-center border border-gray-200 rounded p-2 transition hover:border-primary-color focus:outline-none"
+                data-value="Unspecified"
+              >
+                <img
+                  src="./assets/Sedan.svg"
+                  alt="Unspecified"
+                  class="w-12 h-12 mb-2"
+                />
+                <span class="text-sm">Unspecified</span>
+              </button>
+            </div>
+          </section>
+          <!-- Discount Tab -->
+          <section class="sidebar-panel p-6 hidden" data-panel="discount">
+            <p class="text-gray-500">Discount filter content goes here.</p>
+          </section>
+          <!-- Accessories Tab -->
+          <section class="sidebar-panel p-6 hidden" data-panel="accessories">
+            <p class="text-gray-500">Accessories filter content goes here.</p>
+          </section>
+        </div>
+        <!-- Bottom Section -->
+        <div class="px-6 py-4 border-t bg-white">
+          <div
+            id="selectedFilters"
+            class="flex flex-wrap gap-2 mb-4 min-h-4"
+          ></div>
+          <div class="flex justify-between gap-4">
+            <button
+              id="resetFilters"
+              class="flex-1 py-2 border cursor-pointer border-gray-300 rounded text-grey-three font-medium hover:bg-gray-100 transition"
+            >
+              Reset
+            </button>
+            <button
+              id="applyFilters"
+              class="flex-1 py-2 cursor-pointer bg-primary-color text-white rounded font-medium hover:bg-primary-color/90 transition"
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script>
+      // Sidebar open/close logic
+      const seeAllBtn = document.querySelector(
+        "button.text-primary-color.font-bold"
+      );
+      const sidebarOverlay = document.getElementById("sidebarFilterOverlay");
+      const sidebar = document.getElementById("sidebarFilter");
+      const closeSidebarBtn = document.getElementById("closeSidebarFilter");
+      const applyBtn = document.getElementById("applyFilters");
+      const resetBtn = document.getElementById("resetFilters");
+      const selectedFilters = document.getElementById("selectedFilters");
+
+      // Tabs
+      const tabButtons = document.querySelectorAll(".sidebar-tab");
+      const tabPanels = document.querySelectorAll(".sidebar-panel");
+
+      // Body type selection
+      const bodyTypeOptions = document.querySelectorAll(".body-type-option");
+      let selectedBodyTypes = [];
+
+      function openSidebar() {
+        sidebarOverlay.classList.remove("hidden");
+        setTimeout(() => {
+          sidebar.classList.remove("translate-x-full");
+          sidebarOverlay.classList.add("opacity-100");
+        }, 10);
+        // Trap focus (accessibility)
+        sidebar.focus();
+      }
+      function closeSidebar() {
+        sidebar.classList.add("translate-x-full");
+        sidebarOverlay.classList.remove("opacity-100");
+        setTimeout(() => {
+          sidebarOverlay.classList.add("hidden");
+        }, 300);
+      }
+      seeAllBtn.addEventListener("click", openSidebar);
+      closeSidebarBtn.addEventListener("click", closeSidebar);
+      applyBtn.addEventListener("click", closeSidebar);
+
+      // Tab switching
+      for (const btn of tabButtons) {
+        btn.addEventListener("click", () => {
+          tabButtons.forEach((b) => {
+            b.classList.remove("border-primary-color", "text-primary-color");
+            b.classList.add("border-transparent", "text-gray-500");
+            b.setAttribute("aria-selected", "false");
+          });
+          btn.classList.add("border-primary-color", "text-primary-color");
+          btn.classList.remove("border-transparent", "text-gray-500");
+          btn.setAttribute("aria-selected", "true");
+          const tab = btn.getAttribute("data-tab");
+          tabPanels.forEach((panel) => {
+            panel.classList.toggle(
+              "hidden",
+              panel.getAttribute("data-panel") !== tab
+            );
+          });
+        });
+      }
+
+      // Body type filter selection
+      function renderSelectedFilters() {
+        selectedFilters.innerHTML = "";
+        selectedBodyTypes.forEach((type) => {
+          const tag = document.createElement("span");
+          tag.className =
+            "flex items-center bg-red-100 text-red-600 px-3 py-1 rounded text-sm font-medium mr-2 mb-2";
+          tag.innerHTML = `${type} <button type="button" aria-label="Remove ${type}" class="ml-2 text-lg leading-none focus:outline-none remove-filter">&times;</button>`;
+          tag.querySelector("button").addEventListener("click", () => {
+            selectedBodyTypes = selectedBodyTypes.filter((t) => t !== type);
+            updateBodyTypeSelection();
+            renderSelectedFilters();
+          });
+          selectedFilters.appendChild(tag);
+        });
+      }
+      function updateBodyTypeSelection() {
+        bodyTypeOptions.forEach((opt) => {
+          if (selectedBodyTypes.includes(opt.getAttribute("data-value"))) {
+            opt.classList.add("border-primary-color", "bg-primary-color/10");
+          } else {
+            opt.classList.remove("border-primary-color", "bg-primary-color/10");
+          }
+        });
+      }
+      bodyTypeOptions.forEach((opt) => {
+        opt.addEventListener("click", () => {
+          const value = opt.getAttribute("data-value");
+          if (selectedBodyTypes.includes(value)) {
+            selectedBodyTypes = selectedBodyTypes.filter((t) => t !== value);
+          } else {
+            selectedBodyTypes.push(value);
+          }
+          updateBodyTypeSelection();
+          renderSelectedFilters();
+        });
+      });
+      resetBtn.addEventListener("click", () => {
+        selectedBodyTypes = [];
+        updateBodyTypeSelection();
+        renderSelectedFilters();
+      });
+      // Close sidebar on overlay click
+      sidebarOverlay.addEventListener("click", (e) => {
+        if (e.target === sidebarOverlay) closeSidebar();
+      });
+      // Keyboard accessibility: close on Escape
+      window.addEventListener("keydown", (e) => {
+        if (!sidebarOverlay.classList.contains("hidden") && e.key === "Escape")
+          closeSidebar();
+      });
+    </script>
+    <!-- End Sidebar Filter Modal -->
   </body>
 </html>
