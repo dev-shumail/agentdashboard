@@ -140,7 +140,7 @@
 
     <!-- Content Section Starts here -->
 
-    <div class="bg-grey-eight px-4 py-2 h-screen">
+    <div class="bg-grey-eight px-4 py-2 mb-18">
       <div class="flex justify-between">
         <div>
           <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
@@ -355,7 +355,7 @@
 
           <!-- Customer Summary Section End -->
           <form class="mt-3">
-            <div class="grid grid-cols-3 items-center gap-x-3">
+            <div class="grid grid-cols-3 items-center gap-x-3 grid-rows-3">
               <!-- customer name starts -->
               <div class="w-full">
                 <label for="cstmrName" class="text-sm text-grey-two"
@@ -521,7 +521,122 @@
                 <div class="flex gap-x-2"></div>
               </div>
               <!-- Date of Birth Ends -->
+
+              <!-- Tin Number starts -->
+              <div class="w-full mt-2">
+                <label for="cstmrTIN" class="text-sm text-grey-two"
+                  >TIN <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTIN"
+                  placeholder="Enter Customer Name"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three"
+                />
+              </div>
+              <!-- TIN ends here -->
+
+              <!-- Country Starts here -->
+              <div class="w-full mt-2">
+                <label for="cstrcountryname" class="text-sm text-grey-two"
+                  >Country <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Country
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Country Ends here -->
+
+              <!-- Cell Number starts -->
+              <div class="w-full mt-2">
+                <label for="cstmrTelNumber" class="text-sm text-grey-two"
+                  >Tel <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Customer Name"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three"
+                />
+              </div>
+              <!-- Cell Number ends here -->
+
+              <!-- City Starts here -->
+              <div class="w-full mt-2">
+                <label for="cstrcityname" class="text-sm text-grey-two"
+                  >City <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcityname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select City
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- City Ends here -->
+
+              <!-- Customer Address starts -->
+              <div class="w-full mt-2 xl:col-span-2">
+                <label for="cstmrAddress" class="text-sm text-grey-two"
+                  >Address <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrAddress"
+                  placeholder="Enter Customer Address"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three"
+                />
+              </div>
+              <!-- Customer Address ends here -->
             </div>
+
             <div></div>
           </form>
         </div>
@@ -538,7 +653,7 @@
         <div class="flex items-center max-w-4xl">
           <!-- Step 1 -->
           <a
-            href="#"
+            href="./index.html"
             class="flex flex-row active items-center gap-x-1.5 cursor-pointer"
             data-step="1"
           >
@@ -559,7 +674,7 @@
             data-step="2"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full bg-primary-color border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
             >
               <p class="text-sm">2</p>
             </div>
@@ -576,7 +691,7 @@
             data-step="3"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full bg-primary-color border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
             >
               <p class="text-sm">3</p>
             </div>
