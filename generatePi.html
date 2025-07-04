@@ -137,6 +137,113 @@
     </nav>
     <!-- Navbar Ends here -->
 
+    <!-- Content Section Starts Here -->
+    <div class="bg-grey-eight px-4 py-2 h-screen">
+      <div class="grid grid-cols-3 gap-3">
+        <!-- Import your car grid -->
+        <div class="col-span-2">
+          <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
+          <p class="text-base text-grey-two font-normal">
+            Fast. Reliable. Hassle-Free Vehicle Shipping.
+          </p>
+        </div>
+        <!-- import your car grid end -->
+
+        <!-- Grand total price grid starts -->
+        <div
+          class="border border-primary-color bg-[#1735591a] rounded flex justify-between items-center"
+        >
+          <p class="px-3 text-grey-two text-xl font-semibold">
+            Grand Total Price
+          </p>
+          <p class="px-3 text-xl font-semibold text-grey-two">
+            CIF <span class="font-bold text-red-500">USD 72,646</span>
+          </p>
+        </div>
+        <!-- Grand total price grid ends -->
+
+        <!-- Simple Estimate and Advanced Estimate starts here -->
+        <div
+          class="col-span-2 border border-grey-seven bg-white rounded py-2 px-3 drop-shadow-sm"
+        >
+          <!-- Tab Switcher Start -->
+          <div class="flex border-b border-grey-six">
+            <button
+              id="tabSimple"
+              class="tab-btn cursor-pointer active-tab px-4 py-2 text-sm md:text-base font-bold border-b-2 border-primary-color text-primary-color"
+            >
+              Simple Estimate
+            </button>
+            <button
+              id="tabAdvanced"
+              class="tab-btn cursor-pointer px-4 py-2 text-sm md:text-base font-normal border-b-2 border-transparent text-grey-four hover:text-primary-color"
+            >
+              Advanced Estimate
+            </button>
+          </div>
+          <!-- Tab Switcher End -->
+
+          <!-- Tab Content Start -->
+          <div class="mt-4">
+            <div id="contentSimple" class="tab-content block">
+              <p class="text-grey-four text-sm md:text-base">
+                This is the Simple Estimate content. Add your simple estimate
+                form or table here.
+              </p>
+            </div>
+
+            <div id="contentAdvanced" class="tab-content hidden">
+              <p class="text-grey-four text-sm md:text-base">
+                This is the Advanced Estimate content. Add your advanced
+                estimate fields or options here.
+              </p>
+            </div>
+          </div>
+          <!-- Tab Content End -->
+        </div>
+
+        <!-- Simple Estimate and Advanced Estimate ends here  -->
+
+        <div class="py-2 px-3 border border-grey-seven bg-white rounded">
+          <p class="text-grey-two font-medium">Discounts</p>
+          <div
+            class="border border-yellow-400 bg-[#f6bb3b1a] px-2 rounded mt-1"
+          >
+            <p class="text-[#c08300] text-xs py-1">
+              Other supplier's stock included. Invoice can be created, but won’t
+              auto-send even within discount limit. BFJ will confirm stock
+              before sending.
+            </p>
+          </div>
+
+          <!-- Search and promotion code div starts here -->
+          <div class="grid gap-x-3 grid-cols-2 mt-2">
+            <div>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three"
+                placeholder="Search By Ref. No"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three"
+                placeholder="Promotion Code/Veh"
+              />
+            </div>
+          </div>
+          <!-- Search and promotion code div ends here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section Ends Here -->
+
     <!-- Footer Starts here -->
     <footer
       class="fixed w-full bottom-0 z-20 bg-white py-3 px-4 flex justify-between items-center"
@@ -253,4 +360,71 @@
 
     <!-- Footer Ends here -->
   </body>
+
+  <script>
+    const tabSimple = document.getElementById("tabSimple");
+    const tabAdvanced = document.getElementById("tabAdvanced");
+    const contentSimple = document.getElementById("contentSimple");
+    const contentAdvanced = document.getElementById("contentAdvanced");
+
+    tabSimple.addEventListener("click", () => {
+      // Switch active tab styles
+      tabSimple.classList.add(
+        "active-tab",
+        "font-bold",
+        "border-primary-color",
+        "text-primary-color"
+      );
+      tabSimple.classList.remove(
+        "font-normal",
+        "text-grey-four",
+        "border-transparent"
+      );
+      tabAdvanced.classList.remove(
+        "active-tab",
+        "font-bold",
+        "border-primary-color",
+        "text-primary-color"
+      );
+      tabAdvanced.classList.add(
+        "font-normal",
+        "text-grey-four",
+        "border-transparent"
+      );
+
+      // Show/hide content
+      contentSimple.classList.remove("hidden");
+      contentAdvanced.classList.add("hidden");
+    });
+
+    tabAdvanced.addEventListener("click", () => {
+      // Switch active tab styles
+      tabAdvanced.classList.add(
+        "active-tab",
+        "font-bold",
+        "border-primary-color",
+        "text-primary-color"
+      );
+      tabAdvanced.classList.remove(
+        "font-normal",
+        "text-grey-four",
+        "border-transparent"
+      );
+      tabSimple.classList.remove(
+        "active-tab",
+        "font-bold",
+        "border-primary-color",
+        "text-primary-color"
+      );
+      tabSimple.classList.add(
+        "font-normal",
+        "text-grey-four",
+        "border-transparent"
+      );
+
+      // Show/hide content
+      contentSimple.classList.add("hidden");
+      contentAdvanced.classList.remove("hidden");
+    });
+  </script>
 </html>
