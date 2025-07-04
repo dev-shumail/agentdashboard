@@ -138,7 +138,7 @@
     <!-- Navbar Ends here -->
 
     <!-- Content Section Starts Here -->
-    <div class="bg-grey-eight px-4 py-2 h-screen">
+    <div class="bg-grey-eight px-4 py-2 mb-18">
       <div class="grid grid-cols-3 gap-3">
         <!-- Import your car grid -->
         <div class="col-span-2">
@@ -185,6 +185,7 @@
 
           <!-- Tab Content Start -->
           <div>
+            <!-- Simple Estimate starts here -->
             <div id="picontentSimpleEst" class="tab-content block">
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-3">
                 <!-- Country Starts Here -->
@@ -287,9 +288,7 @@
                       class="text-sm md:text-[15px] text-grey-two bg-[#fafafa] rounded drop-shadow-[#0000000f]"
                     >
                       <th class="px-2 py-3 font-semibold">Arrival port</th>
-                      <th class="px-2 py-3 font-semibold">
-                        Delivery Destination
-                      </th>
+                      <th class="px-2 py-3 font-semibold">Destination</th>
                       <th class="px-2 py-3 font-semibold">Service Details</th>
                       <th class="px-2 py-3 font-semibold">Delivery Price</th>
                       <th class="px-2 py-3 font-semibold">Total Price</th>
@@ -366,15 +365,13 @@
                         class="text-sm md:text-[15px] text-grey-two bg-[#fafafa] rounded drop-shadow-[#0000000f]"
                       >
                         <th class="px-2 py-3 font-semibold">Arrival port</th>
-                        <th class="px-2 py-3 font-semibold">
-                          Delivery Destination
-                        </th>
+                        <th class="px-2 py-3 font-semibold">Destination</th>
                         <th class="px-2 py-3 font-semibold">Service Details</th>
-                        <th class="px-2 py-3 font-semibold">Vehicle Price</th>
+                        <th class="px-2 py-3 font-semibold">Car Price</th>
                         <th
                           class="px-2 py-3 font-semibold flex gap-x-1 items-center"
                         >
-                          Additional Fee
+                          Extra Fee
                           <div class="relative group">
                             <!-- Hover wrapper around icon AND tooltip -->
                             <div class="cursor-pointer">
@@ -531,9 +528,66 @@
                   </table>
                 </div>
                 <!-- 2nd table ends here -->
+
+                <!-- Additional Options and Government Requirements Starts Here -->
+
+                <div class="flex flex-wrap gap-y-2">
+                  <div class="mt-3 w-full lg:w-1/2">
+                    <p class="font-semibold text-grey-two text-xl">
+                      Additional Options
+                    </p>
+                    <label class="custom-checkbox" for="piMarineInsurance">
+                      <input type="checkbox" id="piMarineInsurance" />
+                      <span class="checkmark"></span>
+                      Marine Insurance
+                    </label>
+                    <label class="custom-checkbox" for="piOtozWarrenty">
+                      <input type="checkbox" id="piOtozWarrenty" />
+                      <span class="checkmark"></span>
+                      Otoz.ai Warranty
+                    </label>
+                    <p class="text-xs mt-1 font-normal text-red-500">
+                      Otoz.ai warranty is USD 80 per vehicle
+                    </p>
+                  </div>
+
+                  <div class="mt-3 w-full lg:w-1/2">
+                    <p class="font-semibold text-grey-two text-xl">
+                      Local Government Requirements
+                    </p>
+                    <label class="custom-checkbox" for="piPreExportInsp">
+                      <input type="checkbox" id="piPreExportInsp" />
+                      <span class="checkmark"></span>
+                      Pre-export Inspection
+                    </label>
+                    <label
+                      class="custom-checkbox"
+                      for="piGovernmentRequirement"
+                    >
+                      <input type="checkbox" id="piGovernmentRequirement" />
+                      <span class="checkmark"></span>
+                      Requirement by your Government
+                    </label>
+                    <p class="text-xs mt-1 font-normal text-grey-four">
+                      (Not Available)
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex justify-between px-4 bg-[#1735590d] mt-2 py-2">
+                  <p class="text-grey-two text-xl font-semibold">Total Price</p>
+                  <p class="text-grey-two text-xl font-semibold">
+                    CIF <span class="pl-2 text-red-600 fontbo">USD 72,646</span>
+                  </p>
+                </div>
+
+                <!-- Additional Options and Government Requirements Ends Here -->
               </div>
-              <!-- Arrival Port Table Ends -->
             </div>
+
+            <!-- Simple Estimate Ends Here -->
+
+            <!-- Advanced Estimates starts here -->
 
             <div id="piContentAdvancedEst" class="tab-content hidden">
               <p class="text-grey-four text-sm md:text-base">
@@ -542,6 +596,7 @@
               </p>
             </div>
           </div>
+
           <!-- Tab Content End -->
         </div>
 
