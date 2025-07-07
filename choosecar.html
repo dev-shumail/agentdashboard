@@ -157,36 +157,42 @@
       </div>
       <!-- Import your car end -->
       <div class="bg-white border-grey-seven border px-4 py-2 rounded mt-3">
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap">
           <!-- Search field starts-->
-          <div class="flex items-center gap-x-2">
-            <input
-              type="search"
-              name="search"
-              class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded"
-              placeholder="Search"
-            />
+          <div
+            class="flex items-center justify-between gap-x-2 w-full lg:w-fit lg:justify-start"
+          >
+            <div class="flex gap-x-2 items-center">
+              <input
+                type="search"
+                name="search"
+                class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded"
+                placeholder="Search"
+              />
 
-            <button
-              class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300"
-            >
-              Download Stock List
-            </button>
+              <button
+                class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer flex border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300"
+              >
+                Download
+                <span class="hidden xl:block xl:pl-1"> Stock List</span>
+              </button>
 
-            <button
-              class="bg-blue-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-blue-color hover:bg-transparent hover:text-blue-color transition-all duration-300"
-            >
-              Copy Links
-            </button>
-
-            <p class="text-primary-color font-semibold">10 cars selected</p>
+              <button
+                class="bg-blue-color px-3 py-1.5 flex outline-none text-white rounded text-sm cursor-pointer border border-blue-color hover:bg-transparent hover:text-blue-color transition-all duration-300"
+              >
+                Copy <span class="hidden xl:block xl:pl-1"> Links</span>
+              </button>
+            </div>
+            <div>
+              <p class="text-primary-color font-semibold">10 cars selected</p>
+            </div>
           </div>
 
           <!-- Search field ends here -->
 
           <!-- filters start here -->
 
-          <div class="flex gap-x-2">
+          <div class="flex gap-x-2 mt-2 lg:mt-0 w-full lg:w-fit justify-between lg:justify-start">
             <div class="relative mt-1 w-44">
               <select
                 name="searchMake"
