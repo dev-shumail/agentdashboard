@@ -121,16 +121,18 @@
       <div>
         <ul class="flex items-center gap-x-4">
           <div class="flex items-center">
-            <label
-              for="theme-switcher"
-              class="mr-2 text-sm text-grey-four dark:text-dark-grey-four-color hidden lg:block"
-              >Theme:</label
-            >
+            <span class="hidden lg:block">
+              <label
+                for="theme-switcher"
+                class="mr-2 text-sm text-grey-four dark:text-dark-grey-four-color"
+                >Theme:</label
+              >
+            </span>
 
             <div class="relative w-24">
               <select
                 id="theme-switcher"
-                class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six outline-none dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
+                class="appearance-none ml-2 lg:ml-0 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six outline-none dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
               >
                 <option value="auto">Auto</option>
 
@@ -259,7 +261,9 @@
 
           <!-- filters start here -->
 
-          <div class="flex gap-x-2 mt-2 lg:mt-0 w-full lg:w-fit justify-between lg:justify-start">
+          <div
+            class="flex gap-x-2 mt-2 lg:mt-0 w-full lg:w-fit justify-between lg:justify-start"
+          >
             <div class="relative mt-1 w-44">
               <select
                 name="searchMake"
@@ -769,4 +773,6 @@
     <!-- Footer Ends here -->
     <script src="src/tableSelect.js"></script>
   </body>
+
+  <script src="./themeSwitcher.js"></script>
 </html>
