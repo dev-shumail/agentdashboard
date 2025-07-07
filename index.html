@@ -10,7 +10,7 @@
   <body>
     <!-- Navbar Starts here -->
     <nav
-      class="flex justify-between items-center py-3 px-4 bg-white sticky w-full top-0 z-20"
+      class="flex justify-between items-center py-3 px-4 bg-white dark:bg-dark-background-color sticky w-full top-0 z-20"
     >
       <div class="flex items-center">
         <!-- Logo -->
@@ -22,7 +22,10 @@
 
         <!-- Menus -->
         <ul class="ml-10 gap-x-6 flex items-center">
-          <a href="#" class="flex items-center gap-x-1 active group">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 active group text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="17"
@@ -40,9 +43,14 @@
               />
             </svg>
 
-            <li>Create PI</li></a
+            <li class="text-grey-two dark:text-dark-grey-two flex">
+              <span class="hidden lg:block lg:pr-1">Create</span> PI
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -56,9 +64,14 @@
               />
             </svg>
 
-            <li>Quote</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Quote
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="19"
@@ -72,9 +85,14 @@
               />
             </svg>
 
-            <li>PI Search</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color flex">
+              <span class="hidden lg:block lg:pr-1">PI</span> Search
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -92,7 +110,9 @@
               />
             </svg>
 
-            <li>Report</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Report
+            </li></a
           >
         </ul>
       </div>
@@ -100,7 +120,47 @@
       <!-- Logout Section -->
       <div>
         <ul class="flex items-center gap-x-4">
-          <a href="#" class="flex items-center gap-x-2">
+          <div class="flex items-center">
+            <label
+              for="theme-switcher"
+              class="mr-2 text-sm text-grey-four dark:text-dark-grey-four-color hidden lg:block"
+              >Theme:</label
+            >
+
+            <div class="relative w-24">
+              <select
+                id="theme-switcher"
+                class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six outline-none dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
+              >
+                <option value="auto">Auto</option>
+
+                <option value="light">Light</option>
+
+                <option value="dark">Dark</option>
+              </select>
+
+              <div
+                class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+              >
+                <svg
+                  width="11"
+                  height="8"
+                  viewBox="0 0 11 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                    fill="#999999"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="18"
@@ -113,10 +173,15 @@
                 fill="#777777"
               />
             </svg>
-            <span class="text-grey-four">Help</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Help</span
+            >
           </a>
 
-          <a href="#" class="flex items-center gap-x-2">
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="19"
               height="19"
@@ -130,48 +195,66 @@
               />
             </svg>
 
-            <span class="text-grey-four">Logout</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Logout</span
+            >
           </a>
         </ul>
       </div>
     </nav>
     <!-- Navbar Ends here -->
     <!-- Content Section -->
-    <div class="bg-grey-eight px-4 py-2">
-      <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
-      <p class="text-base text-grey-two font-normal">
+    <div class="bg-grey-eight dark:bg-dark-background-color px-4 py-2">
+      <p class="text-[24px] text-grey-two dark:text-dark-grey-two font-bold">
+        Import Your Car
+      </p>
+      <p class="text-base text-grey-two dark:text-dark-grey-two font-normal">
         Fast. Reliable. Hassle-Free Vehicle Shipping.
       </p>
 
       <div class="grid xl:grid-cols-3 gap-x-3 mt-3">
-        <div class="bg-white border border-grey-seven rounded px-4 py-2 w-full">
+        <div
+          class="bg-white dark:bg-dark-background-color border border-grey-seven dark:border-dark-grey-seven rounded px-4 py-2 w-full"
+        >
           <div class="flex justify-between items-center">
             <div>
-              <p class="font-semibold text-grey-two text-xl">Basic Info</p>
+              <p
+                class="font-semibold text-grey-two dark:text-dark-grey-two text-xl"
+              >
+                Basic Info
+              </p>
             </div>
             <div>
               <button
-                class="px-3 py-2 bg-secondary-color rounded text-sm cursor-pointer"
+                class="px-3 py-2 bg-secondary-color rounded text-sm cursor-pointer text-dark-background-color"
               >
                 Popular List
               </button>
             </div>
           </div>
           <form class="mt-1">
-            <label for="searchRefNo" class="text-sm">Search by Ref. No </label>
+            <label
+              for="searchRefNo"
+              class="text-sm text-grey-four dark:text-dark-grey-four-color"
+              >Search by Ref. No
+            </label>
             <input
               type="text"
               id="searchRefNo"
-              class="border border-grey-six rounded w-full mt-1 py-1 placeholder:text-grey-six text-sm pl-3 outline-none text-grey-three"
+              class="border border-grey-six dark:border-dark-grey-six rounded w-full mt-1 py-1 placeholder:text-grey-six text-sm pl-3 outline-none text-grey-three dark:text-[#d1d5db] bg-grey-eight dark:bg-dark-background-color"
               placeholder="Search By Ref. No"
             />
 
             <!-- Select Make -->
-            <label for="searchMake" class="mt-3 text-sm">Make (all)</label>
+            <label
+              for="searchMake"
+              class="mt-3 text-sm text-grey-four dark:text-dark-grey-four-color"
+              >Make (all)</label
+            >
             <div class="relative w-full mt-1">
               <select
                 name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
               >
                 <option value="" class="text-grey-six text-sm">
                   Select Make
@@ -198,11 +281,15 @@
             </div>
 
             <!-- Model (all) -->
-            <label for="searchModel" class="text-sm mt-3">Search Model</label>
+            <label
+              for="searchModel"
+              class="text-sm mt-3 text-grey-four dark:text-dark-grey-four-color"
+              >Search Model</label
+            >
             <div class="relative w-full mt-1">
               <select
                 name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
               >
                 <option value="" class="text-grey-six text-sm">
                   Select Model
@@ -231,19 +318,27 @@
             <!-- Min Price and Max Price -->
             <div class="flex items-center justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Price</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Price
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-four rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-four dark:text-dark-grey-four-color rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                   placeholder="0"
                 />
               </div>
               <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
               <div class="w-full">
-                <p class="text-sm">Max Year</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Year
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-four rounded focus:outline-none w-full placeholder:text-grey-six"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-four dark:text-dark-grey-four-color rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                   placeholder="Any"
                 />
               </div>
@@ -253,11 +348,15 @@
 
             <div class="flex justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Year</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Year
+                </p>
                 <div class="relative mt-1">
                   <select
                     name="searchMake"
-                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                    class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                   >
                     <option value="" class="text-grey-six text-sm">1970</option>
                     <option value="P">Pakistan</option>
@@ -286,11 +385,15 @@
 
               <!-- Max Year-->
               <div class="w-full">
-                <p class="text-sm">Max Year</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Year
+                </p>
                 <div class="relative w-full mt-1">
                   <select
                     name="searchMake"
-                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                    class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                   >
                     <option value="" class="text-grey-six text-sm">2025</option>
                     <option value="P">Pakistan</option>
@@ -318,17 +421,21 @@
           </form>
         </div>
         <div
-          class="xl:col-span-2 bg-white border border-grey-seven rounded px-4 py-2"
+          class="xl:col-span-2 bg-white dark:bg-dark-background-color border border-grey-seven dark:border-dark-grey-seven rounded px-4 py-2"
         >
-          <p class="text-grey-two font-bold py-1">Specifications</p>
+          <p class="text-grey-two dark:text-dark-grey-two font-bold py-1">
+            Specifications
+          </p>
           <!--  1st row filters of specifications -->
           <div class="grid xl:grid-cols-4 gap-x-2 mt-1">
             <div class="w-full">
-              <p class="text-sm">Fuel</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Fuel
+              </p>
               <div class="relative">
                 <select
                   name="searchMake"
-                  class="appearance-none mt-1 text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none mt-1 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">Select</option>
                   <option value="P">Pakistan</option>
@@ -353,11 +460,13 @@
               </div>
             </div>
             <div class="w-full">
-              <p class="text-sm">Transmission</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Transmission
+              </p>
               <div class="relative">
                 <select
                   name="searchMake"
-                  class="appearance-none mt-1 text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none mt-1 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">Select</option>
                   <option value="P">Pakistan</option>
@@ -382,11 +491,13 @@
               </div>
             </div>
             <div class="w-full">
-              <p class="text-sm">Steering</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Steering
+              </p>
               <div class="relative">
                 <select
                   name="searchMake"
-                  class="appearance-none mt-1 text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none mt-1 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">Select</option>
                   <option value="P">Pakistan</option>
@@ -411,11 +522,13 @@
               </div>
             </div>
             <div class="w-full">
-              <p class="text-sm">Drivetrain</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Drivetrain
+              </p>
               <div class="relative">
                 <select
                   name="searchMake"
-                  class="appearance-none mt-1 text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none mt-1 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">Select</option>
                   <option value="P">Pakistan</option>
@@ -447,19 +560,27 @@
             <!-- Milage -->
             <div class="flex items-center justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Milage</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Milage
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                   placeholder="0"
                 />
               </div>
               <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
               <div class="w-full">
-                <p class="text-sm">Max Milage</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Milage
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                   placeholder="Any"
                 />
               </div>
@@ -468,19 +589,27 @@
             <!-- Engine -->
             <div class="flex items-center justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Eng.cc</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Eng.cc
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                   placeholder="400"
                 />
               </div>
               <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
               <div class="w-full">
-                <p class="text-sm">Max Eng.cc</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Eng.cc
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                   placeholder="Any"
                 />
               </div>
@@ -489,19 +618,27 @@
             <!-- Grade -->
             <div class="flex items-center justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Grade</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Grade
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                   placeholder="1"
                 />
               </div>
               <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
               <div class="w-full">
-                <p class="text-sm">Max Grade</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Grade
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                   placeholder="6"
                 />
               </div>
@@ -510,19 +647,27 @@
             <!-- Seats -->
             <div class="flex items-center justify-between gap-x-2 mt-3">
               <div class="w-full">
-                <p class="text-sm">Min Seats</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Min Seats
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                   placeholder="2"
                 />
               </div>
               <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
               <div class="w-full">
-                <p class="text-sm">Max Seats</p>
+                <p
+                  class="text-sm text-grey-four dark:text-dark-grey-four-color"
+                >
+                  Max Seats
+                </p>
                 <input
                   type="text"
-                  class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six"
+                  class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                   placeholder="12"
                 />
               </div>
@@ -533,11 +678,13 @@
           <!-- 3rd row filters of specifications starts here-->
           <div class="grid grid-cols-2 gap-x-3 mt-3">
             <div class="w-full">
-              <p class="text-sm">Interior Color</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Interior Color
+              </p>
               <div class="relative mt-1">
                 <select
                   name="searchMake"
-                  class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">
                     Select Interior Color
@@ -564,11 +711,13 @@
               </div>
             </div>
             <div class="w-full">
-              <p class="text-sm">Exterior Color</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Exterior Color
+              </p>
               <div class="relative mt-1">
                 <select
                   name="searchMake"
-                  class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                  class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
                 >
                   <option value="" class="text-grey-six text-sm">
                     Select Exterior Color
@@ -600,7 +749,9 @@
 
           <!-- 4th row filters of specifications starts here -->
           <div class="mt-3 flex justify-between">
-            <p class="text-sm">Body Types</p>
+            <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+              Body Types
+            </p>
           </div>
           <form class="grid grid-cols-8 gap-x-3 mt-2">
             <!-- hatchback -->
@@ -613,12 +764,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/HatchBack.svg" alt="HatchBack" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">HatchBack</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                HatchBack
+              </p>
             </div>
 
             <!-- Sedan -->
@@ -631,12 +786,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/Sedan.svg" alt="Sedan" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">Sedan</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                Sedan
+              </p>
             </div>
 
             <!-- SUV -->
@@ -649,12 +808,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/SUV.svg" alt="SUV" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">SUV</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                SUV
+              </p>
             </div>
 
             <!-- MPV -->
@@ -667,12 +830,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/MPV.svg" alt="MPV" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">MPV</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                MPV
+              </p>
             </div>
 
             <!-- Coupe -->
@@ -685,12 +852,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/Copue.svg" alt="Coupe" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">Coupe</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                Coupe
+              </p>
             </div>
 
             <!-- Truck -->
@@ -703,12 +874,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/Truck.svg" alt="Truck" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">Truck</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                Truck
+              </p>
             </div>
 
             <!-- Wagon -->
@@ -721,12 +896,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/Wagon.svg" alt="Wagon" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">Wagon</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                Wagon
+              </p>
             </div>
 
             <!-- Convertible -->
@@ -739,12 +918,16 @@
                   class="sr-only peer"
                 />
                 <div
-                  class="border border-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight peer-checked:border-primary-color peer-checked:bg-grey-eight"
+                  class="border border-grey-seven dark:border-dark-grey-seven rounded p-1 transition group-hover:border-primary-color group-hover:bg-grey-eight dark:group-hover:bg-[#181a1b] peer-checked:border-primary-color peer-checked:bg-grey-eight dark:peer-checked:bg-dark-background-color dark:peer-checked:border-dark-primary-color dark:group-hover:border-dark-primary-color"
                 >
                   <img src="./assets/Convertible.svg" alt="Convertible" />
                 </div>
               </label>
-              <p class="text-sm mt-1 text-center text-grey-two">Convertible</p>
+              <p
+                class="text-sm mt-1 text-center text-grey-two dark:text-dark-grey-two"
+              >
+                Convertible
+              </p>
             </div>
           </form>
 
@@ -756,17 +939,25 @@
 
       <div class="grid xl:grid-cols-3 gap-x-3 gap-y-3 mt-3 mb-18">
         <!-- Location filters starts here -->
-        <div class="bg-white border border-grey-seven rounded px-4 py-2 w-full">
-          <p class="text-grey-two font-semibold text-xl">Location</p>
+        <div
+          class="bg-white dark:bg-dark-background-color border border-grey-seven dark:border-dark-grey-seven rounded px-4 py-2 w-full"
+        >
+          <p
+            class="text-grey-two dark:text-dark-grey-two font-semibold text-xl"
+          >
+            Location
+          </p>
 
           <!-- Stock Country -->
-          <label for="searchStockCountry" class="text-sm mt-3"
+          <label
+            for="searchStockCountry"
+            class="text-sm mt-3 text-grey-four dark:text-dark-grey-four-color"
             >Stock Country</label
           >
           <div class="relative w-full mt-1">
             <select
               name="searchStockCountry"
-              class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+              class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
             >
               <option value="" class="text-grey-six text-sm">
                 Select Stock Country
@@ -793,13 +984,15 @@
           </div>
 
           <!-- Stock Location -->
-          <label for="searchStockLocation" class="text-sm mt-3"
+          <label
+            for="searchStockLocation"
+            class="text-sm mt-3 text-grey-four dark:text-dark-grey-four-color"
             >Stock Area</label
           >
           <div class="relative w-full mt-1">
             <select
               name="searchStockLocation"
-              class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+              class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
             >
               <option value="" class="text-grey-six text-sm">
                 Select Stock Location
@@ -825,11 +1018,15 @@
             </div>
           </div>
 
-          <label for="searchStockArea" class="text-sm mt-3">Stock Area</label>
+          <label
+            for="searchStockArea"
+            class="text-sm mt-3 text-grey-four dark:text-dark-grey-four-color"
+            >Stock Area</label
+          >
           <div class="relative w-full mt-1">
             <select
               name="searchStockArea"
-              class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+              class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
             >
               <option value="" class="text-grey-six text-sm">
                 Select Stock Area
@@ -859,68 +1056,84 @@
         <!-- Location filters ends here -->
 
         <!-- Special Offers -->
-        <div class="bg-white border-grey-seven rounded px-4 py-2 w-full">
-          <p class="text-grey-two font-semibold text-xl">Special Offers</p>
+        <div
+          class="bg-white dark:bg-dark-background-color border border-grey-seven dark:border-dark-grey-seven rounded px-4 py-2 w-full"
+        >
+          <p
+            class="text-grey-two dark:text-dark-grey-two font-semibold text-xl"
+          >
+            Special Offers
+          </p>
 
           <div class="flex items-center justify-between gap-x-2 mt-3">
             <div class="w-full">
-              <p class="text-sm">Min Discount %</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Min Discount %
+              </p>
               <input
                 type="text"
-                class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six font-normal"
+                class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six font-normal bg-grey-eight dark:bg-dark-background-color"
                 placeholder="0"
               />
             </div>
             <div class="h-[1px] w-3 bg-grey-four mt-6"></div>
             <div class="w-full">
-              <p class="text-sm">Max Discount %</p>
+              <p class="text-sm text-grey-four dark:text-dark-grey-four-color">
+                Max Discount %
+              </p>
               <input
                 type="text"
-                class="border mt-1 border-grey-six pl-3 py-0.5 text-sm text-grey-three rounded focus:outline-none w-full placeholder:text-grey-six"
+                class="border mt-1 border-grey-six dark:border-dark-grey-six pl-3 py-0.5 text-sm text-grey-three dark:text-[#d1d5db] rounded focus:outline-none w-full placeholder:text-grey-six bg-grey-eight dark:bg-dark-background-color"
                 placeholder="Any"
               />
             </div>
           </div>
           <div class="mt-2 flex justify-between">
-            <p class="text-sm font-light">Discounts</p>
+            <p
+              class="text-sm font-light text-grey-four dark:text-dark-grey-four-color"
+            >
+              Discounts
+            </p>
           </div>
           <div class="grid grid-cols-3 grid-rows-3 gap-x-1 mt-1">
-            <div class="border border-grey-six px-1 py-1 rounded">
+            <div
+              class="border border-grey-six dark:border-dark-grey-six px-1 py-1 rounded bg-grey-eight dark:bg-dark-background-color"
+            >
               <a href="#">
                 <img src="./assets/premierTag.svg" alt="premierTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded">
+            <div class="border px-1 py-1 rounded">
               <a href="#">
                 <img src="./assets/thirdPartyTag.svg" alt="thirdPartyTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded">
+            <div class="border px-1 py-1 rounded">
               <a href="#">
                 <img src="./assets/primeTag.svg" alt="primeTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded mt-1">
+            <div class="border px-1 py-1 rounded mt-1">
               <a href="#">
                 <img src="./assets/deluxeTag.svg" alt="deluxeTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded mt-1">
+            <div class="border px-1 py-1 rounded mt-1">
               <a href="#">
                 <img src="./assets/300discountTag.svg" alt="Discount" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded mt-1">
+            <div class="border px-1 py-1 rounded mt-1">
               <a href="#">
                 <img src="./assets/outletTag.svg" alt="outletTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded mt-1">
+            <div class="border px-1 py-1 rounded mt-1">
               <a href="#">
                 <img src="./assets/readyTag.svg" alt="readyTag" />
               </a>
             </div>
-            <div class="border border-grey-six px-1 py-1 rounded mt-1">
+            <div class="border px-1 py-1 rounded mt-1">
               <a href="#">
                 <img src="./assets/timeTag.svg" alt="timeTag" />
               </a>
@@ -931,124 +1144,168 @@
         <!-- Special Offers End here -->
 
         <!-- Accessories filters -->
-        <div class="bg-white border-grey-seven rounded px-4 py-2 w-full">
+        <div
+          class="bg-white dark:bg-dark-background-color border border-grey-seven dark:border-dark-grey-seven rounded px-4 py-2 w-full"
+        >
           <div class="flex justify-between">
-            <p class="text-xl text-grey-two font-semibold">Accessories</p>
+            <p class="text-xl font-semibold dark:text-white">Accessories</p>
           </div>
 
           <div class="grid grid-cols-3 grid-rows-7">
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              CD player
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >CD player</span
+              >
             </label>
 
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Sunroof
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Sunroof</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Leather Seat
-            </label>
-
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              ABS
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Leather Seat</span
+              >
             </label>
 
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Airbag
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              Side Airbag
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              AM/FM Radio
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >ABS</span
+              >
             </label>
 
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Alloy Wheels
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Airbag</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              DVD
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Side Airbag</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Power Seat
-            </label>
-
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              CD Changer
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              Non-Smoker
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              Back Tire
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >AM/FM Radio</span
+              >
             </label>
 
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              One Owner
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Alloy Wheels</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Body Kit
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >DVD</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Turbo
-            </label>
-
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              Grill Guard
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" id="player" />
-              <span class="checkmark"></span>
-              Front Spoiler
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Power Seat</span
+              >
             </label>
 
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              ESC
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >CD Changer</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Power Steering
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Non-Smoker</span
+              >
             </label>
             <label class="custom-checkbox">
               <input type="checkbox" id="player" />
               <span class="checkmark"></span>
-              Central Locking
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Back Tire</span
+              >
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >One Owner</span
+              >
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Body Kit</span
+              >
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Turbo</span
+              >
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Grill Guard</span
+              >
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Front Spoiler</span
+              >
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >ESC</span
+              >
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Power Steering</span
+              >
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="player" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color"
+                >Central Locking</span
+              >
             </label>
           </div>
         </div>
@@ -1061,7 +1318,7 @@
 
     <!-- Footer Starts here -->
     <footer
-      class="fixed w-full bottom-0 z-20 bg-white py-3 px-4 flex justify-between items-center"
+      class="fixed w-full bottom-0 z-20 bg-white dark:bg-dark-background-color py-3 px-4 flex justify-between items-center"
     >
       <div class="w-2/3">
         <div class="flex items-center max-w-4xl">
@@ -1072,15 +1329,19 @@
             data-step="1"
           >
             <div
-              class="rounded-full bg-primary-color h-6 w-6 flex items-center justify-center text-white"
+              class="rounded-full bg-primary-color dark:bg-dark-primary-color h-6 w-6 flex items-center justify-center text-white"
             >
               <p class="text-sm">1</p>
             </div>
-            <p class="text-sm text-grey-two hidden xl:block">Search for Cars</p>
+            <p
+              class="text-sm text-grey-two dark:text-dark-grey-two hidden xl:block"
+            >
+              Search for Cars
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
           <!-- Step 2 -->
           <a
             href="./choosecar.html"
@@ -1088,15 +1349,19 @@
             data-step="2"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">2</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Choose a Car</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Choose a Car
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 3 -->
           <a
@@ -1105,17 +1370,19 @@
             data-step="3"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">3</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
               Select Customer
             </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 4 -->
           <a
@@ -1124,15 +1391,19 @@
             data-step="4"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">4</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Generate PI</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Generate PI
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 5 -->
           <a
@@ -1141,25 +1412,29 @@
             data-step="5"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">5</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Confirm PI</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Confirm PI
+            </p>
           </a>
         </div>
       </div>
       <div class="w-2/3 xl:w-1/3 flex gap-x-4 justify-end">
         <a
           href="#"
-          class="bg-grey-seven rounded-[5px] px-6 py-2 group text-grey-three"
+          class="bg-grey-seven dark:bg-[#23272a] rounded-[5px] px-6 py-2 group text-grey-three dark:text-[#d1d5db]"
         >
           <button class="cursor-pointer">Back</button>
         </a>
 
         <a
           href="#"
-          class="bg-primary-color px-6 py-2 group rounded-[5px] text-white"
+          class="bg-primary-color dark:bg-dark-primary-color dark:text-grey-seven px-6 py-2 group rounded-[5px] text-white"
         >
           <button class="cursor-pointer">Search Cars</button>
         </a>
@@ -1168,4 +1443,53 @@
 
     <!-- Footer Ends here -->
   </body>
+  <script>
+    // Theme switcher logic
+    const themeSelect = document.getElementById("theme-switcher");
+    // const root = document.documentElement;
+    const html = document.documentElement;
+    // Helper to set theme
+    function setTheme(mode) {
+      if (mode === "dark") {
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else if (mode === "light") {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        // auto
+        localStorage.removeItem("theme");
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          html.classList.add("dark");
+        } else {
+          html.classList.remove("dark");
+        }
+      }
+    }
+    // On load, set theme from localStorage or system
+    function initTheme() {
+      const saved = localStorage.getItem("theme");
+      if (saved === "dark" || saved === "light") {
+        themeSelect.value = saved;
+        setTheme(saved);
+      } else {
+        themeSelect.value = "auto";
+        setTheme("auto");
+      }
+    }
+    // Listen for system changes if auto
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        if (localStorage.getItem("theme") === null) {
+          setTheme("auto");
+        }
+      });
+    // Listen for user change
+    themeSelect.addEventListener("change", (e) => {
+      setTheme(e.target.value);
+    });
+    // Init
+    initTheme();
+  </script>
 </html>
