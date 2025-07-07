@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-grey-eight: #f7f7f7;
@@ -11,4 +12,14 @@
   --color-secondary-color: #f6bb3b;
   --color-green-color: #65b211;
   --color-blue-color: #1890ff;
+
+  /* for dark mode */
+
+  --color-dark-primary-color: #5444bb;
+  --color-dark-background-color: #181a1b;
+  --color-dark-grey-four-color: #b0b3b8;
+  --color-dark-grey-two: #e5e7eb;
+  --color-dark-grey-six: #3a3b3c;
+  --color-dark-cards-color: #222124;
+  --color-dark-grey-seven: #23272a;
 }
