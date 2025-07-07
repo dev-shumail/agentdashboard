@@ -658,7 +658,7 @@
 
     <!-- Footer Starts here -->
     <footer
-      class="fixed w-full bottom-0 z-20 bg-white py-3 px-4 flex justify-between items-center"
+      class="fixed w-full bottom-0 z-20 bg-white dark:bg-dark-background-color py-3 px-4 flex justify-between items-center"
     >
       <div class="w-2/3">
         <div class="flex items-center max-w-4xl">
@@ -669,31 +669,39 @@
             data-step="1"
           >
             <div
-              class="rounded-full bg-primary-color h-6 w-6 flex items-center justify-center text-white"
+              class="rounded-full bg-primary-color dark:bg-dark-primary-color h-6 w-6 flex items-center justify-center text-white"
             >
               <p class="text-sm">1</p>
             </div>
-            <p class="text-sm text-grey-two hidden xl:block">Search for Cars</p>
+            <p
+              class="text-sm text-grey-two dark:text-dark-grey-two hidden xl:block"
+            >
+              Search for Cars
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
           <!-- Step 2 -->
           <a
-            href="#"
+            href="./choosecar.html"
             class="flex flex-row items-center gap-x-1.5 cursor-pointer"
             data-step="2"
           >
             <div
-              class="rounded-full bg-primary-color border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six bg-primary-color dark:bg-dark-primary-color dark:border-dark-primary-color dark:text-white h-6 w-6 flex items-center justify-center text-grey-six"
             >
               <p class="text-sm">2</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Choose a Car</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Choose a Car
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 3 -->
           <a
@@ -702,17 +710,19 @@
             data-step="3"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">3</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
               Select Customer
             </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 4 -->
           <a
@@ -721,15 +731,19 @@
             data-step="4"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">4</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Generate PI</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Generate PI
+            </p>
           </a>
 
           <!-- Connector Line -->
-          <div class="h-0.5 bg-grey-seven flex-1 mx-2"></div>
+          <div class="h-0.5 bg-grey-seven dark:bg-white flex-1 mx-2"></div>
 
           <!-- Step 5 -->
           <a
@@ -738,32 +752,38 @@
             data-step="5"
           >
             <div
-              class="rounded-full border border-grey-six h-6 w-6 flex items-center justify-center text-grey-six"
+              class="rounded-full border border-grey-six dark:border-dark-grey-six h-6 w-6 flex items-center justify-center text-grey-six dark:text-[#3a3b3c]"
             >
               <p class="text-sm">5</p>
             </div>
-            <p class="text-sm text-grey-four hidden xl:block">Confirm PI</p>
+            <p
+              class="text-sm text-grey-four dark:text-dark-grey-four-color hidden xl:block"
+            >
+              Confirm PI
+            </p>
           </a>
         </div>
       </div>
       <div class="w-2/3 xl:w-1/3 flex gap-x-4 justify-end">
         <a
-          href="./index.html"
-          class="bg-grey-seven rounded-[5px] px-6 py-2 group text-grey-three"
+          href="./choosecar.html"
+          class="bg-grey-seven rounded-[5px] px-3 xl:px-5 py-2 group text-grey-three"
         >
           <button class="cursor-pointer">Back</button>
         </a>
 
         <a
           href="#"
-          class="bg-green-color px-6 py-2 group rounded-[5px] text-white"
+          class="bg-green-color px-3 xl:px-5 py-2 group rounded-[5px] text-white"
         >
-          <button class="cursor-pointer">Create Quote</button>
+          <button class="cursor-pointer flex">
+           <span class="hidden lg:block lg:pr-1">Create</span> Quote
+          </button>
         </a>
 
         <a
           href="#"
-          class="bg-primary-color px-6 py-2 group rounded-[5px] text-white"
+          class="bg-primary-color px-3 xl:px-5 py-2 group rounded-[5px] text-white"
         >
           <button class="cursor-pointer">Select Customer</button>
         </a>
