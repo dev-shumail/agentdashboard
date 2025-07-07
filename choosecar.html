@@ -10,7 +10,7 @@
   <body>
     <!-- Navbar Starts here -->
     <nav
-      class="flex justify-between items-center py-3 px-4 bg-white sticky w-full top-0 z-20"
+      class="flex justify-between items-center py-3 px-4 bg-white dark:bg-dark-background-color sticky w-full top-0 z-20"
     >
       <div class="flex items-center">
         <!-- Logo -->
@@ -22,7 +22,10 @@
 
         <!-- Menus -->
         <ul class="ml-10 gap-x-6 flex items-center">
-          <a href="#" class="flex items-center gap-x-1 active group">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 active group text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="17"
@@ -40,9 +43,14 @@
               />
             </svg>
 
-            <li>Create PI</li></a
+            <li class="text-grey-two dark:text-dark-grey-two flex">
+              <span class="hidden lg:block lg:pr-1">Create</span> PI
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -56,9 +64,14 @@
               />
             </svg>
 
-            <li>Quote</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Quote
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="19"
@@ -72,9 +85,14 @@
               />
             </svg>
 
-            <li>PI Search</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color flex">
+              <span class="hidden lg:block lg:pr-1">PI</span> Search
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -92,7 +110,9 @@
               />
             </svg>
 
-            <li>Report</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Report
+            </li></a
           >
         </ul>
       </div>
@@ -100,7 +120,47 @@
       <!-- Logout Section -->
       <div>
         <ul class="flex items-center gap-x-4">
-          <a href="#" class="flex items-center gap-x-2">
+          <div class="flex items-center">
+            <label
+              for="theme-switcher"
+              class="mr-2 text-sm text-grey-four dark:text-dark-grey-four-color hidden lg:block"
+              >Theme:</label
+            >
+
+            <div class="relative w-24">
+              <select
+                id="theme-switcher"
+                class="appearance-none text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six outline-none dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
+              >
+                <option value="auto">Auto</option>
+
+                <option value="light">Light</option>
+
+                <option value="dark">Dark</option>
+              </select>
+
+              <div
+                class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+              >
+                <svg
+                  width="11"
+                  height="8"
+                  viewBox="0 0 11 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                    fill="#999999"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="18"
@@ -113,10 +173,15 @@
                 fill="#777777"
               />
             </svg>
-            <span class="text-grey-four">Help</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Help</span
+            >
           </a>
 
-          <a href="#" class="flex items-center gap-x-2">
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="19"
               height="19"
@@ -130,7 +195,9 @@
               />
             </svg>
 
-            <span class="text-grey-four">Logout</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Logout</span
+            >
           </a>
         </ul>
       </div>
