@@ -9,8 +9,9 @@
   --dark-primary-color: #5444bb;
   --primary-font: "Poppins";
 }
-html{
-  transition: all 0.35s;
+
+* {
+  transition: background-color 0.38s, color 0.35s;
 }
 /* custom classes */
 
@@ -86,7 +87,6 @@ label {
 .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
   display: block;
 }
-
 
 .dark .custom-checkbox input[type="checkbox"]:checked + .checkmark {
   background-color: var(--dark-primary-color);
