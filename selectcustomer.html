@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body class="dark:bg-dark-background-color">
     <!-- Navbar Starts here -->
     <nav
-      class="flex justify-between items-center py-3 px-4 bg-white sticky w-full top-0 z-20"
+      class="flex justify-between items-center py-3 px-4 bg-white dark:bg-dark-background-color sticky w-full top-0 z-20"
     >
       <div class="flex items-center">
         <!-- Logo -->
@@ -22,7 +22,10 @@
 
         <!-- Menus -->
         <ul class="ml-10 gap-x-6 flex items-center">
-          <a href="#" class="flex items-center gap-x-1 active group">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 active group text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="17"
@@ -40,9 +43,14 @@
               />
             </svg>
 
-            <li>Create PI</li></a
+            <li class="text-grey-two dark:text-dark-grey-two flex">
+              <span class="hidden lg:block lg:pr-1">Create</span> PI
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -56,9 +64,14 @@
               />
             </svg>
 
-            <li>Quote</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Quote
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="19"
@@ -72,9 +85,14 @@
               />
             </svg>
 
-            <li>PI Search</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color flex">
+              <span class="hidden lg:block lg:pr-1">PI</span> Search
+            </li></a
           >
-          <a href="#" class="flex items-center gap-x-1">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="17"
               height="18"
@@ -92,7 +110,9 @@
               />
             </svg>
 
-            <li>Report</li></a
+            <li class="text-grey-four dark:text-dark-grey-four-color">
+              Report
+            </li></a
           >
         </ul>
       </div>
@@ -100,7 +120,49 @@
       <!-- Logout Section -->
       <div>
         <ul class="flex items-center gap-x-4">
-          <a href="#" class="flex items-center gap-x-2">
+          <div class="flex items-center">
+            <span class="hidden lg:block">
+              <label
+                for="theme-switcher"
+                class="mr-2 text-sm text-grey-four dark:text-dark-grey-four-color"
+                >Theme:</label
+              >
+            </span>
+
+            <div class="relative w-24">
+              <select
+                id="theme-switcher"
+                class="appearance-none ml-2 lg:ml-0 text-sm text-grey-four dark:text-dark-grey-four-color w-full border border-grey-six outline-none dark:border-dark-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none bg-grey-eight dark:bg-dark-background-color"
+              >
+                <option value="auto">Auto</option>
+
+                <option value="light">Light</option>
+
+                <option value="dark">Dark</option>
+              </select>
+
+              <div
+                class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+              >
+                <svg
+                  width="11"
+                  height="8"
+                  viewBox="0 0 11 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                    fill="#999999"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="18"
               height="18"
@@ -113,10 +175,15 @@
                 fill="#777777"
               />
             </svg>
-            <span class="text-grey-four">Help</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Help</span
+            >
           </a>
 
-          <a href="#" class="flex items-center gap-x-2">
+          <a
+            href="#"
+            class="flex items-center gap-x-2 text-grey-four dark:text-dark-grey-four-color"
+          >
             <svg
               width="19"
               height="19"
@@ -130,48 +197,57 @@
               />
             </svg>
 
-            <span class="text-grey-four">Logout</span>
+            <span class="text-grey-four dark:text-dark-grey-four-color"
+              >Logout</span
+            >
           </a>
         </ul>
       </div>
     </nav>
-
     <!-- Navbar Ends here -->
 
     <!-- Content Section Starts here -->
 
-    <div class="bg-grey-eight px-4 py-2 mb-18">
+    <div class="bg-grey-eight px-4 py-2 mb-18 dark:bg-dark-background-color">
+      <!-- Import your car starts -->
       <div class="flex justify-between">
         <div>
-          <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
-          <p class="text-base text-grey-two font-normal">
+          <p class="text-[24px] text-grey-two font-bold dark:text-grey-six">
+            Import Your Car
+          </p>
+          <p class="text-base text-grey-two font-normal dark:text-grey-six">
             Fast. Reliable. Hassle-Free Vehicle Shipping.
           </p>
         </div>
         <div
-          class="bg-[#1735591a] border-2 rounded flex items-center px-3 border-primary-color"
+          class="bg-[#1735591a] border-2 rounded flex items-center px-3 border-primary-color dark:border-dark-primary-color"
         >
-          <p class="font-extrabold text-primary-color text-xl">
+          <p
+            class="font-extrabold text-primary-color text-xl dark:text-dark-primary-color"
+          >
             Total Result: 350
           </p>
         </div>
       </div>
+      <!-- Import your car end -->
 
       <div class="grid grid-cols-6 gap-x-4 py-4">
         <div
-          class="col-span-2 xl:col-span-1 border border-grey-seven bg-white shadow-sm px-3 py-2"
+          class="col-span-2 xl:col-span-1 border border-grey-seven bg-white dark:bg-dark-background-color dark:border-dark-grey-six rounded shadow-sm px-3 py-2"
         >
-          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
-
+          <p class="text-grey-two dark:text-white text-base font-semibold">
+            Selected Cars
+          </p>
           <label
             for="searchCarByRef"
-            class="text-grey-two text-sm mt-3 font-light"
+            class="text-grey-two text-sm mt-3 font-light dark:text-dark-grey-four-color"
             >Search by Ref. No</label
           >
           <input
+            id="searchCarByRef"
             type="text"
             placeholder="Ref No."
-            class="placeholder:text-grey-six w-full text-grey-three mt-0.5 rounded text-sm outline-none border border-grey-six pl-2 py-0.5"
+            class="placeholder:text-grey-six w-full text-grey-three mt-0.5 rounded text-sm outline-none border border-grey-six pl-2 py-0.5 dark:border-dark-grey-six dark:text-dark-grey-two"
           />
           <div class="flex flex-col gap-2 mt-4">
             <!-- Add Reference numbers -->
@@ -196,33 +272,37 @@
 
         <!-- 2nd grid starts -->
         <div
-          class="col-span-4 xl:col-span-5 border border-grey-seven bg-white shadow-sm px-3 py-2"
+          class="col-span-4 xl:col-span-5 border border-grey-seven bg-white shadow-sm px-3 py-2 dark:bg-dark-background-color dark:border-dark-grey-six rounded"
         >
-          <p class="text-grey-two text-base font-semibold">Selected Cars</p>
+          <p class="text-grey-two text-base font-semibold dark:text-white">
+            Customers
+          </p>
 
-          <label for="searchCstmrEmail" class="text-sm text-grey-two mt-3"
+          <label
+            for="searchCstmrEmail"
+            class="text-sm text-grey-two mt-3 dark:text-dark-grey-four-color"
             >Email:</label
           >
           <input
             type="email"
             name=""
-            id=""
+            id="searchCstmrEmail"
             placeholder="Search customer by email"
-            class="border border-grey-six rounded text-sm w-64 py-1 pl-3 placeholder:text-grey-six text-grey-three outline-none placeholder:font-light"
+            class="border border-grey-six rounded text-sm w-64 py-1 pl-3 placeholder:text-grey-six text-grey-three outline-none placeholder:font-light dark:border-dark-grey-six dark:text-dark-grey-two"
           />
 
           <button
-            class="px-5 border border-primary-color bg-primary-color text-white rounded py-1 cursor-pointer mt-0.5 text-sm"
+            class="px-5 border border-primary-color bg-primary-color text-white rounded py-1 cursor-pointer mt-0.5 text-sm dark:bg-dark-primary-color dark:hover:border-dark-primary-color"
           >
             Search
           </button>
 
           <!-- Customer Summary Section Start -->
           <div
-            class="bg-[#f3f5f6] w-full rounded border border-grey-six mt-3 px-3 py-2"
+            class="bg-[#f3f5f6] dark:bg-[#262C36] w-full rounded border border-grey-six mt-3 px-3 py-2"
           >
             <p
-              class="text-grey-two font-semibold pb-2 border-b border-b-[#e8e7e7]"
+              class="text-grey-two font-semibold pb-2 border-b border-b-[#e8e7e7] dark:text-cyan-50"
             >
               Customer Summary
             </p>
@@ -231,10 +311,10 @@
                 <div
                   class="flex justify-between border-b border-b-[#e8e7e7] pb-2"
                 >
-                  <p class="w-full text-grey-two font-medium text-[15px]">
+                  <p class="w-full text-grey-two font-medium text-[15px] dark:text-dark-grey-four-color">
                     Purchased
                   </p>
-                  <p class="w-full text-[15px] text-grey-two font-light">
+                  <p class="w-full text-[15px] text-grey-two font-light dark:text-dark-grey-four-color">
                     0 car's
                   </p>
                 </div>
@@ -762,4 +842,5 @@
 
     <!-- Footer Ends here -->
   </body>
+  <script src="./themeSwitcher.js"></script>
 </html>
