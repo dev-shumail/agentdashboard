@@ -207,25 +207,31 @@
     <!-- Navbar Ends here -->
 
     <!-- Content Section Starts Here -->
-    <div class="bg-grey-eight px-4 py-2 ">
+    <div class="bg-grey-eight px-4 py-2 dark:bg-dark-background-color">
       <!-- Import your car starts -->
       <div class="flex justify-between">
         <div>
-          <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
-          <p class="text-base text-grey-two font-normal">
+          <p class="text-[24px] text-grey-two font-bold dark:text-grey-six">
+            Import Your Car
+          </p>
+          <p class="text-base text-grey-two font-normal dark:text-grey-six">
             Fast. Reliable. Hassle-Free Vehicle Shipping.
           </p>
         </div>
         <div
-          class="bg-[#1735591a] border-2 rounded flex items-center px-3 border-primary-color"
+          class="bg-[#1735591a] border-2 rounded flex items-center px-3 border-primary-color dark:border-dark-primary-color"
         >
-          <p class="font-extrabold text-primary-color text-xl">
+          <p
+            class="font-extrabold text-primary-color text-xl dark:text-dark-primary-color"
+          >
             Total Result: 350
           </p>
         </div>
       </div>
       <!-- Import your car end -->
-      <div class="bg-white border-grey-seven border px-4 py-2 rounded mt-3">
+      <div
+        class="bg-white border-grey-seven border px-4 py-2 rounded mt-3 dark:bg-dark-background-color dark:border-dark-grey-seven"
+      >
         <div class="flex justify-between flex-wrap">
           <!-- Search field starts-->
           <div
@@ -235,7 +241,7 @@
               <input
                 type="search"
                 name="search"
-                class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded"
+                class="border pl-3 py-1.5 text-sm outline-none focus:border-primary-color focus:outline-primary-color text-grey-three border-[#d9d9d9] rounded dark:focus:outline-none dark:border-dark-grey-six dark:placeholder:text-dark-grey-four-color dark:text-dark-grey-four-color"
                 placeholder="Search"
               />
 
@@ -253,7 +259,11 @@
               </button>
             </div>
             <div>
-              <p class="text-primary-color font-semibold">10 cars selected</p>
+              <p
+                class="text-primary-color font-semibold dark:text-dark-primary-color"
+              >
+                10 cars selected
+              </p>
             </div>
           </div>
 
@@ -267,7 +277,7 @@
             <div class="relative mt-1 w-44">
               <select
                 name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:border-dark-grey-six dark:text-dark-grey-four-color"
               >
                 <option value="" class="text-grey-six text-sm">
                   20 Rows Displayed
@@ -297,7 +307,7 @@
             <div class="relative mt-1 w-44">
               <select
                 name="searchMake"
-                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 pl-2 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:border-dark-grey-six dark:text-dark-grey-four-color"
               >
                 <option value="" class="text-grey-six text-sm">Sort By</option>
                 <option value="P">Pakistan</option>
@@ -327,7 +337,7 @@
         <!-- Table of Cars Starts here -->
         <div class="overflow-x-auto w-full mt-3">
           <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
+            <thead class="bg-gray-50 dark:bg-[#151B23] dark:border dark:border-dark-grey-six">
               <tr>
                 <!-- 1: Select All Checkbox -->
                 <th
@@ -344,19 +354,19 @@
                 </th>
                 <!-- 2: Car Image -->
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Car Image
                 </th>
                 <!-- 3: Reference No. + Make/Model/Code -->
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Reference No.
                 </th>
                 <!-- 4-12: Placeholders -->
                 <th
-                  class="py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Make <br />
                   Model
@@ -364,46 +374,46 @@
                   Model Code
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Year <br />
                   Mileage
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   FOB Price
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Notes
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Sale Icons
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Stock Area <br />
                   Stock Location
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Auction <br />
                   Grade
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Release <br />
                   Days
                 </th>
                 <th
-                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider"
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
                 >
                   Actions
                 </th>
@@ -411,10 +421,10 @@
             </thead>
             <tbody
               id="car-table-body"
-              class="bg-white divide-y divide-gray-200"
+              class="bg-white divide-y divide-gray-200 dark:bg-[#262C36] dark:border dark:border-dark-grey-six dark:divide-grey-four"
             >
               <!-- Example Row 1 start -->
-              <tr class="transition-colors duration-200">
+              <tr class="transition-colors duration-200 dark:text-white">
                 <!-- 1: Row Checkbox -->
                 <td class="px-4 py-2">
                   <label class="custom-checkbox">
@@ -531,7 +541,7 @@
               <!-- Example row 2 starts -->
 
               <!-- Example Row 1 -->
-              <tr class="transition-colors duration-200">
+              <tr class="transition-colors duration-200 dark:text-white">
                 <!-- 1: Row Checkbox -->
                 <td class="px-4 py-2">
                   <label class="custom-checkbox">

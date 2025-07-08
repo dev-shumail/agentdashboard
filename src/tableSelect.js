@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateRowBg() {
     checkboxes.forEach((cb, idx) => {
       if (cb.checked) {
-        rows[idx].classList.add("bg-grey-eight");
+        rows[idx].classList.add("tableRowColor");
       } else {
-        rows[idx].classList.remove("bg-grey-eight");
+        rows[idx].classList.remove("tableRowColor");
       }
     });
   }
