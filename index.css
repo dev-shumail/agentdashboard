@@ -88,6 +88,17 @@ label {
   display: block;
 }
 
+/* Tabel color */
+
+.tableRowColor {
+  background-color: var(--grey-eight);
+}
+
+.dark .tableRowColor {
+  background-color: #bdd4fc;
+  color: black !important;
+}
+
 .dark .custom-checkbox input[type="checkbox"]:checked + .checkmark {
   background-color: var(--dark-primary-color);
   border: 1px solid var(--dark-primary-color);
