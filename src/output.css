@@ -42,6 +42,7 @@
     --font-weight-extrabold: 800;
     --tracking-wider: 0.05em;
     --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.15);
+    --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,6 +63,7 @@
     --color-dark-grey-four-color: #b0b3b8;
     --color-dark-grey-two: #e5e7eb;
     --color-dark-grey-six: #3a3b3c;
+    --color-dark-cards-color: #222124;
     --color-dark-grey-seven: #23272a;
   }
 }
@@ -333,6 +335,9 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
+  }
   .ml-10 {
     margin-left: calc(var(--spacing) * 10);
   }
@@ -383,6 +388,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .min-h-4 {
     min-height: calc(var(--spacing) * 4);
@@ -1230,6 +1238,26 @@
       padding-left: calc(var(--spacing) * 1);
     }
   }
+  .dark\:divide-dark-grey-four-color {
+    &:where(.dark, .dark *) {
+      :where(& > :not(:last-child)) {
+        border-color: var(--color-dark-grey-four-color);
+      }
+    }
+  }
+  .dark\:divide-grey-four {
+    &:where(.dark, .dark *) {
+      :where(& > :not(:last-child)) {
+        border-color: var(--color-grey-four);
+      }
+    }
+  }
+  .dark\:border {
+    &:where(.dark, .dark *) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .dark\:border-dark-grey-seven {
     &:where(.dark, .dark *) {
       border-color: var(--color-dark-grey-seven);
@@ -1245,9 +1273,39 @@
       border-color: var(--color-dark-primary-color);
     }
   }
+  .dark\:border-grey-seven {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-grey-seven);
+    }
+  }
+  .dark\:bg-\[\#0D1117\] {
+    &:where(.dark, .dark *) {
+      background-color: #0D1117;
+    }
+  }
+  .dark\:bg-\[\#151B23\] {
+    &:where(.dark, .dark *) {
+      background-color: #151B23;
+    }
+  }
+  .dark\:bg-\[\#262C36\] {
+    &:where(.dark, .dark *) {
+      background-color: #262C36;
+    }
+  }
   .dark\:bg-\[\#23272a\] {
     &:where(.dark, .dark *) {
       background-color: #23272a;
+    }
+  }
+  .dark\:bg-\[\#262626\] {
+    &:where(.dark, .dark *) {
+      background-color: #262626;
+    }
+  }
+  .dark\:bg-\[dark\:text-grey-six\] {
+    &:where(.dark, .dark *) {
+      background-color: text-grey-six;
     }
   }
   .dark\:bg-dark-background-color {
@@ -1285,9 +1343,24 @@
       color: var(--color-dark-grey-two);
     }
   }
+  .dark\:text-dark-primary-color {
+    &:where(.dark, .dark *) {
+      color: var(--color-dark-primary-color);
+    }
+  }
+  .dark\:text-grey-eight {
+    &:where(.dark, .dark *) {
+      color: var(--color-grey-eight);
+    }
+  }
   .dark\:text-grey-seven {
     &:where(.dark, .dark *) {
       color: var(--color-grey-seven);
+    }
+  }
+  .dark\:text-grey-six {
+    &:where(.dark, .dark *) {
+      color: var(--color-grey-six);
     }
   }
   .dark\:text-white {
@@ -1324,6 +1397,50 @@
     &:where(.dark, .dark *) {
       &:is(:where(.peer):checked ~ *) {
         background-color: var(--color-dark-background-color);
+      }
+    }
+  }
+  .dark\:placeholder\:text-dark-grey-four-color {
+    &:where(.dark, .dark *) {
+      &::placeholder {
+        color: var(--color-dark-grey-four-color);
+      }
+    }
+  }
+  .dark\:placeholder\:text-grey-six {
+    &:where(.dark, .dark *) {
+      &::placeholder {
+        color: var(--color-grey-six);
+      }
+    }
+  }
+  .dark\:focus\:outline-dark-grey-four-color {
+    &:where(.dark, .dark *) {
+      &:focus {
+        outline-color: var(--color-dark-grey-four-color);
+      }
+    }
+  }
+  .dark\:focus\:outline-dark-primary-color {
+    &:where(.dark, .dark *) {
+      &:focus {
+        outline-color: var(--color-dark-primary-color);
+      }
+    }
+  }
+  .dark\:focus\:outline-none {
+    &:where(.dark, .dark *) {
+      &:focus {
+        --tw-outline-style: none;
+        outline-style: none;
+      }
+    }
+  }
+  .focus\:dark\:outline-none {
+    &:focus {
+      &:where(.dark, .dark *) {
+        --tw-outline-style: none;
+        outline-style: none;
       }
     }
   }
