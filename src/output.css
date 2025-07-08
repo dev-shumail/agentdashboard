@@ -42,7 +42,6 @@
     --font-weight-extrabold: 800;
     --tracking-wider: 0.05em;
     --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.15);
-    --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +62,6 @@
     --color-dark-grey-four-color: #b0b3b8;
     --color-dark-grey-two: #e5e7eb;
     --color-dark-grey-six: #3a3b3c;
-    --color-dark-cards-color: #222124;
     --color-dark-grey-seven: #23272a;
   }
 }
@@ -335,9 +333,6 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
-  .ml-4 {
-    margin-left: calc(var(--spacing) * 4);
-  }
   .ml-10 {
     margin-left: calc(var(--spacing) * 10);
   }
@@ -388,9 +383,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .min-h-4 {
     min-height: calc(var(--spacing) * 4);
@@ -983,6 +975,14 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .duration-350 {
+    --tw-duration: 350ms;
+    transition-duration: 350ms;
+  }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
+  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
@@ -1185,11 +1185,6 @@
       padding-right: calc(var(--spacing) * 1);
     }
   }
-  .lg\:pl-1 {
-    @media (width >= 64rem) {
-      padding-left: calc(var(--spacing) * 1);
-    }
-  }
   .xl\:col-span-1 {
     @media (width >= 80rem) {
       grid-column: span 1 / span 1;
@@ -1228,11 +1223,6 @@
   .xl\:px-5 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 5);
-    }
-  }
-  .xl\:px-6 {
-    @media (width >= 80rem) {
-      padding-inline: calc(var(--spacing) * 6);
     }
   }
   .xl\:pl-1 {
