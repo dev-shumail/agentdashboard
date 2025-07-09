@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body
-    class="bg-white dark:bg-dark-background-color"
-  >
+  <body class="bg-white dark:bg-dark-background-color">
     <!-- Navbar Starts here -->
     <nav
       class="flex justify-between items-center py-3 px-4 bg-white dark:bg-dark-background-color sticky w-full top-0 z-20"
@@ -1100,50 +1098,94 @@
               Discounts
             </p>
           </div>
-          <div class="grid grid-cols-3 grid-rows-3 gap-x-1 mt-1">
-            <div
-              class="border border-grey-six dark:border-dark-grey-six px-1 py-1 rounded bg-grey-eight dark:bg-dark-background-color"
-            >
-              <a href="#">
-                <img src="./assets/premierTag.svg" alt="premierTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded">
-              <a href="#">
-                <img src="./assets/thirdPartyTag.svg" alt="thirdPartyTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded">
-              <a href="#">
-                <img src="./assets/primeTag.svg" alt="primeTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded mt-1">
-              <a href="#">
-                <img src="./assets/deluxeTag.svg" alt="deluxeTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded mt-1">
-              <a href="#">
-                <img src="./assets/300discountTag.svg" alt="Discount" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded mt-1">
-              <a href="#">
-                <img src="./assets/outletTag.svg" alt="outletTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded mt-1">
-              <a href="#">
-                <img src="./assets/readyTag.svg" alt="readyTag" />
-              </a>
-            </div>
-            <div class="border px-1 py-1 rounded mt-1">
-              <a href="#">
-                <img src="./assets/timeTag.svg" alt="timeTag" />
-              </a>
-            </div>
+          <!-- Tags Starts here -->
+          <div class="grid grid-cols-4 xl:grid-cols-3 gap-x-2 mt-1">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="premierTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img
+                  src="./assets/premierTag.svg"
+                  alt="Premier Tag"
+                  class="w-28"
+                />
+              </span>
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="thirdPartyTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img
+                  src="./assets/thirdPartyTag.svg"
+                  alt="Third Party Tag"
+                  class="w-28"
+                />
+              </span>
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="primeTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img src="./assets/primeTag.svg" alt="Prime Tag" class="w-28" />
+              </span>
+            </label>
+
+            <label class="custom-checkbox mt-1">
+              <input type="checkbox" id="deluxeTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img
+                  src="./assets/deluxeTag.svg"
+                  alt="Deluxe Tag"
+                  class="w-28"
+                />
+              </span>
+            </label>
+
+            <label class="custom-checkbox mt-1">
+              <input type="checkbox" id="discountTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img
+                  src="./assets/300discountTag.svg"
+                  alt="Discount Tag"
+                  class="w-28"
+                />
+              </span>
+            </label>
+
+            <label class="custom-checkbox mt-1">
+              <input type="checkbox" id="outletTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img
+                  src="./assets/outletTag.svg"
+                  alt="Outlet Tag"
+                  class="w-28"
+                />
+              </span>
+            </label>
+
+            <label class="custom-checkbox mt-1">
+              <input type="checkbox" id="readyTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img src="./assets/readyTag.svg" alt="Ready Tag" class="w-28" />
+              </span>
+            </label>
+
+            <label class="custom-checkbox mt-1">
+              <input type="checkbox" id="timeTag" />
+              <span class="checkmark"></span>
+              <span class="text-grey-four dark:text-dark-grey-four-color">
+                <img src="./assets/timeTag.svg" alt="Time Tag" class="w-28" />
+              </span>
+            </label>
           </div>
+
+          <!-- Tags Ends here -->
         </div>
 
         <!-- Special Offers End here -->
