@@ -1343,6 +1343,11 @@
       background-color: var(--color-dark-primary-color);
     }
   }
+  .dark\:bg-primary-color {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-primary-color);
+    }
+  }
   .dark\:bg-transparent {
     &:where(.dark, .dark *) {
       background-color: transparent;
