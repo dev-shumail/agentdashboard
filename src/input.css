@@ -22,4 +22,9 @@
   --color-dark-grey-six: #3a3b3c;
   --color-dark-cards-color: #222124;
   --color-dark-grey-seven: #23272a;
+
+  /* Table head */
+
+  --color-table-dark-head: #151b23;
+  --color-table-dark-body: #262c36;
 }
