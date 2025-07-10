@@ -252,6 +252,12 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .-top-0 {
+    top: calc(var(--spacing) * -0);
+  }
+  .-top-full {
+    top: -100%;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -374,6 +380,9 @@
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -1269,6 +1278,17 @@
       border-width: 1px;
     }
   }
+  .dark\:border-none {
+    &:where(.dark, .dark *) {
+      --tw-border-style: none;
+      border-style: none;
+    }
+  }
+  .dark\:border-dark-grey-four-color {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-dark-grey-four-color);
+    }
+  }
   .dark\:border-dark-grey-seven {
     &:where(.dark, .dark *) {
       border-color: var(--color-dark-grey-seven);
@@ -1282,6 +1302,21 @@
   .dark\:border-dark-primary-color {
     &:where(.dark, .dark *) {
       border-color: var(--color-dark-primary-color);
+    }
+  }
+  .dark\:border-white {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-white);
+    }
+  }
+  .dark\:border-b-dark-background-color {
+    &:where(.dark, .dark *) {
+      border-bottom-color: var(--color-dark-background-color);
+    }
+  }
+  .dark\:border-b-dark-grey-six {
+    &:where(.dark, .dark *) {
+      border-bottom-color: var(--color-dark-grey-six);
     }
   }
   .dark\:bg-\[\#151B23\] {
@@ -1324,6 +1359,12 @@
       background-color: var(--color-white);
     }
   }
+  .dark\:font-normal {
+    &:where(.dark, .dark *) {
+      --tw-font-weight: var(--font-weight-normal);
+      font-weight: var(--font-weight-normal);
+    }
+  }
   .dark\:text-\[\#3a3b3c\] {
     &:where(.dark, .dark *) {
       color: #3a3b3c;
@@ -1354,6 +1395,11 @@
       color: var(--color-dark-primary-color);
     }
   }
+  .dark\:text-grey-four {
+    &:where(.dark, .dark *) {
+      color: var(--color-grey-four);
+    }
+  }
   .dark\:text-grey-seven {
     &:where(.dark, .dark *) {
       color: var(--color-grey-seven);
@@ -1367,6 +1413,11 @@
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
+    }
+  }
+  .dark\:accent-dark-primary-color {
+    &:where(.dark, .dark *) {
+      accent-color: var(--color-dark-primary-color);
     }
   }
   .dark\:group-hover\:border-dark-primary-color {
