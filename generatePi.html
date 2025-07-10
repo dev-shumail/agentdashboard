@@ -239,12 +239,10 @@
 
         <!-- Simple Estimate and Advanced Estimate starts here -->
         <div
-          class="col-span-2 border border-grey-seven bg-white rounded py-2 px-3 drop-shadow-sm dark:bg-dark-background-color"
+          class="col-span-2 border border-grey-seven bg-white rounded py-2 px-3 drop-shadow-sm dark:bg-dark-background-color dark:border-dark-grey-seven"
         >
           <!-- Tab Switcher Start -->
-          <div
-            class="flex border-b border-grey-six dark:border-dark-primary-color"
-          >
+          <div class="flex border-b border-grey-six dark:border-none">
             <button
               id="piSimpleTabEst"
               class="tab-btn cursor-pointer active-tab py-2 text-sm md:text-base font-bold border-b-2 border-primary-color text-primary-color dark:border-dark-primary-color dark:text-dark-primary-color"
@@ -305,7 +303,9 @@
 
                 <!-- Currency Starts Here -->
                 <div>
-                  <label for="searchPiCurrency" class="text-sm mt-3 dark:text-dark-grey-four-color"
+                  <label
+                    for="searchPiCurrency"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
                     >Currency
                   </label>
                   <div class="relative w-full mt-1">
@@ -341,14 +341,20 @@
 
                 <!-- Shipping Method Starts here -->
                 <div>
-                  <p class="text-sm mt-3 dark:text-dark-grey-four-color">Shipping Method</p>
+                  <p class="text-sm mt-3 dark:text-dark-grey-four-color">
+                    Shipping Method
+                  </p>
                   <div class="flex gap-x-4">
-                    <label class="custom-checkbox dark:text-dark-grey-four-color">
+                    <label
+                      class="custom-checkbox dark:text-dark-grey-four-color"
+                    >
                       <input type="checkbox" id="piRoro" />
                       <span class="checkmark"></span>
                       RoRo
                     </label>
-                    <label class="custom-checkbox dark:text-dark-grey-four-color">
+                    <label
+                      class="custom-checkbox dark:text-dark-grey-four-color"
+                    >
                       <input type="checkbox" id="piContainer" />
                       <span class="checkmark"></span>
                       Container
@@ -358,14 +364,12 @@
                 <!-- Shipping Methods ends here -->
               </div>
               <!-- Arrival Port Table Starts -->
-              <div class="mt-6">
-                <table
-                  class="w-full text-left border-separate border-spacing-y-2"
-                >
-                  <thead>
-                    <tr
-                      class="text-sm md:text-[15px] text-grey-two bg-[#fafafa] rounded drop-shadow-[#0000000f]"
-                    >
+              <div class="mt-6 overflow-x-auto w-full">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead
+                    class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
+                  >
+                    <tr class="dark:text-dark-grey-two">
                       <th class="px-2 py-3 font-semibold">Arrival port</th>
                       <th class="px-2 py-3 font-semibold">Destination</th>
                       <th class="px-2 py-3 font-semibold">Service Details</th>
@@ -373,540 +377,582 @@
                       <th class="px-2 py-3 font-semibold">Total Price</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr class="align-top">
+                  <tbody
+                    class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four"
+                  >
+                    <tr class="align-top dark:text-white">
                       <td
-                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six"
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six dark:border-b-dark-grey-six"
                         rowspan="2"
                       >
                         Iquique
                       </td>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
                         <label class="flex items-center gap-2 cursor-pointer">
                           <input
                             type="radio"
                             name="iquique-option"
                             checked
-                            class="accent-primary-color"
+                            class="accent-primary-color dark:accent-dark-primary-color"
                           />
                           <span class="font-light text-sm">IQUIQUE (port)</span>
                         </label>
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
                         Pick up at port (RORO)
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       ></td>
                       <td
-                        class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
                         USD 310,188
                       </td>
                     </tr>
-                    <tr>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
+                    <tr class="dark:text-white">
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
                         <label class="flex items-center gap-2 cursor-pointer">
                           <input
                             type="radio"
                             name="iquique-option"
-                            class="accent-primary-color"
+                            class="accent-primary-color dark:accent-dark-primary-color"
                           />
                           <span class="font-light text-sm">IQUIQUE (port)</span>
                         </label>
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
                         pick up at port (Share Container)
                       </td>
                       <td
-                        class="px-2 py-2 text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
                       ></td>
                       <td
-                        class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white dark:font-normal"
                       >
                         USD 306,525
                       </td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
 
-                <!-- 2nd Table starts here -->
-                <div class="overflow-x-auto">
-                  <table
-                    class="w-full text-left border-separate border-spacing-y-2"
+              <!-- 2nd Table starts here -->
+              <div class="overflow-x-auto mt-2 w-full">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead
+                    class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
                   >
-                    <thead>
-                      <tr
-                        class="text-sm md:text-[15px] text-grey-two bg-[#fafafa] rounded drop-shadow-[#0000000f]"
-                      >
-                        <th class="px-2 py-3 font-semibold">Arrival port</th>
-                        <th class="px-2 py-3 font-semibold">Destination</th>
-                        <th class="px-2 py-3 font-semibold">Service Details</th>
-                        <th class="px-2 py-3 font-semibold">Car Price</th>
-                        <th
-                          class="px-2 py-3 font-semibold flex gap-x-1 items-center"
-                        >
-                          Extra Fee
-                          <div class="relative group">
-                            <!-- Hover wrapper around icon AND tooltip -->
-                            <div class="cursor-pointer">
-                              <img
-                                src="./assets/infoIcon.svg"
-                                class="w-4 h-4"
-                              />
-                            </div>
-                            <!-- Tooltip (now always part of hover area) -->
-                            <div
-                              class="absolute bottom-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
-                            >
-                              This is the fee applied on top of the base price.
-                            </div>
-                          </div>
-                        </th>
-
-                        <th class="px-2 py-3 font-semibold">Freight</th>
-                        <th class="px-2 py-3 font-semibold">Total Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="align-top">
-                        <td
-                          class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six"
-                          rowspan="2"
-                        >
-                          Asuncion
-                        </td>
-                        <td class="px-2 py-2 border-b border-b-grey-six">
-                          <label class="flex items-center gap-2 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="iquique-option"
-                              checked
-                              class="accent-primary-color"
-                            />
-                            <span class="font-light text-sm"
-                              >Asuncion (port)</span
-                            >
-                          </label>
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm border-b border-b-grey-six font-light"
-                        >
-                          Pick up at port (RORO)
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 286,310
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 9,876
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          Not Included
-                        </td>
-                        <td
-                          class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six"
-                        >
-                          ASK
-                        </td>
-                      </tr>
-                      <tr class="align-top">
-                        <td class="px-2 py-2 border-b border-b-grey-six">
-                          <label class="flex items-center gap-2 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="iquique-option"
-                              checked
-                              class="accent-primary-color"
-                            />
-                            <span class="font-light text-sm"
-                              >Asuncion (port)</span
-                            >
-                          </label>
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          Pick up at port (RORO)
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 286,310
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 9,876
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          Not Included
-                        </td>
-                        <td
-                          class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six"
-                        >
-                          ASK
-                        </td>
-                      </tr>
-
-                      <tr class="align-middle">
-                        <td class="px-2 py-2 border-b border-b-grey-six">
-                          Africe
-                        </td>
-                        <td class="px-2 py-2 border-b border-b-grey-six">
-                          <label class="flex items-center gap-2 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="iquique-option"
-                              checked
-                              class="accent-primary-color"
-                            />
-                            <span class="font-light text-sm"
-                              >Africa (port)</span
-                            >
-                          </label>
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          pick up at port (Container)
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 286,310
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          USD 9,876
-                        </td>
-                        <td
-                          class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                        >
-                          Not Included
-                        </td>
-                        <td
-                          class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six"
-                        >
-                          USD 297,546
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- 2nd table ends here -->
-
-                <!-- Additional Options and Government Requirements Starts Here -->
-
-                <div class="flex flex-wrap gap-y-2">
-                  <div class="mt-3 w-full lg:w-1/2">
-                    <p class="font-semibold text-grey-two text-xl">
-                      Additional Options
-                    </p>
-                    <label class="custom-checkbox" for="piMarineInsurance">
-                      <input type="checkbox" id="piMarineInsurance" />
-                      <span class="checkmark"></span>
-                      Marine Insurance
-                    </label>
-                    <label class="custom-checkbox" for="piOtozWarrenty">
-                      <input type="checkbox" id="piOtozWarrenty" />
-                      <span class="checkmark"></span>
-                      Otoz.ai Warranty
-                    </label>
-                    <p class="text-xs mt-1 font-normal text-red-500">
-                      Otoz.ai warranty is USD 80 per vehicle
-                    </p>
-                  </div>
-
-                  <div class="mt-3 w-full lg:w-1/2">
-                    <p class="font-semibold text-grey-two text-xl">
-                      Local Government Requirements
-                    </p>
-                    <label class="custom-checkbox" for="piPreExportInsp">
-                      <input type="checkbox" id="piPreExportInsp" />
-                      <span class="checkmark"></span>
-                      Pre-export Inspection
-                      <div class="relative group pl-1">
-                        <!-- Hover wrapper around icon AND tooltip -->
-                        <div class="cursor-pointer">
-                          <img src="./assets/infoIcon.svg" class="w-4 h-4" />
-                        </div>
-                        <!-- Tooltip (now always part of hover area) -->
-                        <div
-                          class="absolute bottom-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
-                        >
-                          This is the fee applied on top of the base price.
-                        </div>
-                      </div>
-                    </label>
-                    <label
-                      class="custom-checkbox"
-                      for="piGovernmentRequirement"
-                    >
-                      <input type="checkbox" id="piGovernmentRequirement" />
-                      <span class="checkmark"></span>
-                      Requirement by your Government
-                      <div class="relative group pl-1">
-                        <!-- Hover wrapper around icon AND tooltip -->
-                        <div class="cursor-pointer">
-                          <img src="./assets/infoIcon.svg" class="w-4 h-4" />
-                        </div>
-                        <!-- Tooltip (now always part of hover area) -->
-                        <div
-                          class="absolute bottom-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
-                        >
-                          This is the fee applied on top of the base price.
-                        </div>
-                      </div>
-                    </label>
-                    <p class="text-xs mt-1 font-normal text-grey-four">
-                      (Not Available)
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex justify-between px-4 bg-[#1735590d] mt-2 py-2">
-                  <p class="text-grey-two text-xl font-semibold">Total Price</p>
-                  <p class="text-grey-two text-xl font-semibold">
-                    CIF <span class="pl-2 text-red-600 fontbo">USD 72,646</span>
-                  </p>
-                </div>
-
-                <!-- Additional Options and Government Requirements Ends Here -->
-
-                <!-- Special UAE Table Starts here -->
-
-                <table
-                  class="w-full text-left border-separate border-spacing-y-2"
-                >
-                  <thead>
-                    <tr
-                      class="text-sm md:text-[15px] text-grey-two bg-[#fafafa] rounded drop-shadow-[#0000000f]"
-                    >
+                    <tr class="dark:text-dark-grey-two">
                       <th class="px-2 py-3 font-semibold">Arrival port</th>
                       <th class="px-2 py-3 font-semibold">Destination</th>
                       <th class="px-2 py-3 font-semibold">Service Details</th>
-                      <!-- <th class="px-2 py-3 font-semibold">Delivery Price</th> -->
+                      <th class="px-2 py-3 font-semibold">Car Price</th>
+                      <th
+                        class="px-2 py-3 font-semibold flex gap-x-1 items-center"
+                      >
+                        Extra Fee
+                        <div class="relative group">
+                          <!-- Hover wrapper around icon AND tooltip -->
+                          <div class="cursor-pointer">
+                            <img src="./assets/infoIcon.svg" class="w-4 h-4" />
+                          </div>
+                          <!-- Tooltip (now always part of hover area) -->
+                          <div
+                            class="absolute -top-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
+                          >
+                            This is the fee applied on top of the base price.
+                          </div>
+                        </div>
+                      </th>
+
+                      <th class="px-2 py-3 font-semibold">Freight</th>
                       <th class="px-2 py-3 font-semibold">Total Price</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody
+                    class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four dark:text-white"
+                  >
                     <tr class="align-top">
                       <td
-                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six"
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six"
                         rowspan="2"
                       >
-                        Jabel Ali
+                        Asuncion
                       </td>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
                         <label class="flex items-center gap-2 cursor-pointer">
                           <input
                             type="radio"
                             name="iquique-option"
                             checked
-                            class="accent-primary-color"
+                            class="accent-primary-color dark:accent-dark-primary-color"
                           />
                           <span class="font-light text-sm"
-                            >JEBEL ALI (port)</span
+                            >Asuncion (port)</span
                           >
                         </label>
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six font-light"
                       >
                         Pick up at port (RORO)
                       </td>
                       <td
-                        class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
-                        AED 250,253
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio"
-                            name="iquique-option"
-                            class="accent-primary-color"
-                          />
-                          <span class="font-light text-sm"
-                            >JEBEL ALI (port)</span
-                          >
-                        </label>
+                        USD 286,310
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
-                        pick up at port (Container)
+                        USD 9,876
                       </td>
                       <td
-                        class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
-                        AED 274,250
-                      </td>
-                    </tr>
-
-                    <!-- Abu Dhabi Port Starts here -->
-                    <tr class="align-top">
-                      <td
-                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six"
-                        rowspan="2"
-                      >
-                        Abu Dhabi
-                      </td>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio"
-                            name="iquique-option"
-                            checked
-                            class="accent-primary-color"
-                          />
-                          <span class="font-light text-sm"
-                            >ABU DHABI (port)</span
-                          >
-                        </label>
+                        Not Included
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                      >
-                        Pick up at port (RORO)
-                      </td>
-                      <td
-                        class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six"
-                      >
-                        AED 257,153
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio"
-                            name="iquique-option"
-                            class="accent-primary-color"
-                          />
-                          <span class="font-light text-sm"
-                            >ABU DHABI (port)</span
-                          >
-                        </label>
-                      </td>
-                      <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                      >
-                        pick up at port (Container)
-                      </td>
-                      <td
-                        class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six"
-                      >
-                        AED 301,854
-                      </td>
-                    </tr>
-                    <!-- Abu Dhabi Port Ends here -->
-
-                    <!-- Dubai Port Starts here -->
-                    <tr class="align-top">
-                      <td
-                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six"
-                        rowspan="2"
-                      >
-                        Dubai
-                      </td>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio"
-                            name="iquique-option"
-                            checked
-                            class="accent-primary-color"
-                          />
-                          <span class="font-light text-sm">Dubai (port)</span>
-                        </label>
-                      </td>
-                      <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
-                      >
-                        Pick up at port (RORO)
-                      </td>
-                      <td
-                        class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
                       >
                         ASK
                       </td>
                     </tr>
-                    <tr>
-                      <td class="px-2 py-2 border-b border-b-grey-six">
+                    <tr class="align-top">
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
                         <label class="flex items-center gap-2 cursor-pointer">
                           <input
                             type="radio"
                             name="iquique-option"
-                            class="accent-primary-color"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
                           />
-                          <span class="font-light text-sm">Dubai (port)</span>
+                          <span class="font-light text-sm"
+                            >Asuncion (port)</span
+                          >
                         </label>
                       </td>
                       <td
-                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
                       >
-                        pick up at port (Container)
+                        Pick up at port (RORO)
                       </td>
                       <td
-                        class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six"
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        USD 286,310
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        USD 9,876
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        Not Included
+                      </td>
+                      <td
+                        class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
                       >
                         ASK
                       </td>
                     </tr>
-                    <!-- Dubai Port Ends here -->
+
+                    <tr class="align-middle">
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        Africe
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="iquique-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Africa (port)</span>
+                        </label>
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        pick up at port (Container)
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        USD 286,310
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        USD 9,876
+                      </td>
+                      <td
+                        class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        Not Included
+                      </td>
+                      <td
+                        class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
+                      >
+                        USD 297,546
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
+              </div>
+              <!-- 2nd table ends here -->
 
-                <!-- Special USE Table ends here -->
+              <!-- Additional Options and Government Requirements Starts Here -->
 
-                <!-- Additional Options of UAE Starts here -->
-
-                <div class="flex flex-wrap gap-y-2">
-                  <div class="mt-3 w-full lg:w-1/2">
-                    <p class="font-semibold text-grey-two text-xl">
-                      Additional Options
-                    </p>
-                    <label class="custom-checkbox" for="piMarineInsuranceUAE">
-                      <input type="checkbox" id="piMarineInsuranceUAE" />
-                      <span class="checkmark"></span>
-                      Marine Insurance
-                    </label>
-                    <label class="custom-checkbox" for="piOtozWarrentyUAE">
-                      <input type="checkbox" id="piOtozWarrentyUAE" />
-                      <span class="checkmark"></span>
-                      Otoz.ai Warranty
-                    </label>
-                    <p class="text-xs mt-1 font-normal text-red-500">
-                      Otoz.ai warranty is USD 80 per vehicle
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex justify-between px-4 bg-[#1735590d] mt-2 py-2">
-                  <p class="text-grey-two text-xl font-semibold">Total Price</p>
-                  <p class="text-grey-two text-xl font-semibold">
-                    CIF <span class="pl-2 text-red-600 fontbo">AED 72,646</span>
+              <div class="flex flex-wrap gap-y-2">
+                <div class="mt-3 w-full lg:w-1/2">
+                  <p
+                    class="font-semibold text-grey-two text-xl dark:text-dark-grey-four-color"
+                  >
+                    Additional Options
+                  </p>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piMarineInsurance"
+                  >
+                    <input type="checkbox" id="piMarineInsurance" />
+                    <span class="checkmark"></span>
+                    Marine Insurance
+                  </label>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piOtozWarrenty"
+                  >
+                    <input type="checkbox" id="piOtozWarrenty" />
+                    <span class="checkmark"></span>
+                    Otoz.ai Warranty
+                  </label>
+                  <p class="text-xs mt-1 font-normal text-red-500">
+                    Otoz.ai warranty is USD 80 per vehicle
                   </p>
                 </div>
 
-                <!-- Additional Options of UAE Ends Here -->
+                <div class="mt-3 w-full lg:w-1/2">
+                  <p
+                    class="font-semibold text-grey-two text-xl dark:text-dark-grey-four-color"
+                  >
+                    Local Government Requirements
+                  </p>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piPreExportInsp"
+                  >
+                    <input type="checkbox" id="piPreExportInsp" />
+                    <span class="checkmark"></span>
+                    Pre-export Inspection
+                    <div class="relative group pl-1">
+                      <!-- Hover wrapper around icon AND tooltip -->
+                      <div class="cursor-pointer">
+                        <img src="./assets/infoIcon.svg" class="w-4 h-4" />
+                      </div>
+                      <!-- Tooltip (now always part of hover area) -->
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
+                      >
+                        This is the fee applied on top of the base price.
+                      </div>
+                    </div>
+                  </label>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piGovernmentRequirement"
+                  >
+                    <input type="checkbox" id="piGovernmentRequirement" />
+                    <span class="checkmark"></span>
+                    Requirement by your Government
+                    <div class="relative group pl-1">
+                      <!-- Hover wrapper around icon AND tooltip -->
+                      <div class="cursor-pointer">
+                        <img src="./assets/infoIcon.svg" class="w-4 h-4" />
+                      </div>
+                      <!-- Tooltip (now always part of hover area) -->
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 w-max max-w-xs text-xs bg-primary-color text-white rounded px-2 py-1 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-auto"
+                      >
+                        This is the fee applied on top of the base price.
+                      </div>
+                    </div>
+                  </label>
+                  <p class="text-xs mt-1 font-normal text-grey-four">
+                    (Not Available)
+                  </p>
+                </div>
               </div>
+
+              <div
+                class="flex justify-between px-4 bg-[#1735590d] mt-2 py-2 dark:bg-table-dark-body"
+              >
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  Total Price
+                </p>
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  CIF <span class="pl-2 text-red-600 fontbo">USD 72,646</span>
+                </p>
+              </div>
+
+              <!-- Additional Options and Government Requirements Ends Here -->
+
+              <!-- Special UAE Table Starts here -->
+
+              <table class="mt-3 w-full divide-y divide-gray-200">
+                <thead
+                  class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
+                >
+                  <tr class="dark:text-white">
+                    <th class="px-2 py-3 font-semibold">Arrival port</th>
+                    <th class="px-2 py-3 font-semibold">Destination</th>
+                    <th class="px-2 py-3 font-semibold">Service Details</th>
+                    <!-- <th class="px-2 py-3 font-semibold">Delivery Price</th> -->
+                    <th class="px-2 py-3 font-semibold">Total Price</th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four dark:text-white"
+                >
+                  <tr class="align-top">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      rowspan="2"
+                    >
+                      Jabel Ali
+                    </td>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          checked
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">JEBEL ALI (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      Pick up at port (RORO)
+                    </td>
+                    <td
+                      class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      AED 250,253
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">JEBEL ALI (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      pick up at port (Container)
+                    </td>
+                    <td
+                      class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
+                    >
+                      AED 274,250
+                    </td>
+                  </tr>
+
+                  <!-- Abu Dhabi Port Starts here -->
+                  <tr class="align-top">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      rowspan="2"
+                    >
+                      Abu Dhabi
+                    </td>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          checked
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">ABU DHABI (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      Pick up at port (RORO)
+                    </td>
+                    <td
+                      class="px-2 py-2 font-bold text-red-500 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      AED 257,153
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">ABU DHABI (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      pick up at port (Container)
+                    </td>
+                    <td
+                      class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
+                    >
+                      AED 301,854
+                    </td>
+                  </tr>
+                  <!-- Abu Dhabi Port Ends here -->
+
+                  <!-- Dubai Port Starts here -->
+                  <tr class="align-top">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      rowspan="2"
+                    >
+                      Dubai
+                    </td>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          checked
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">Dubai (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      Pick up at port (RORO)
+                    </td>
+                    <td
+                      class="px-2 py-2 font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
+                    >
+                      ASK
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="iquique-option"
+                          class="accent-primary-color dark:accent-dark-primary-color"
+                        />
+                        <span class="font-light text-sm">Dubai (port)</span>
+                      </label>
+                    </td>
+                    <td
+                      class="px-2 py-2 text-sm font-light border-b border-b-grey-six dark:border-b-dark-grey-six"
+                    >
+                      pick up at port (Container)
+                    </td>
+                    <td
+                      class="px-2 py-2 text-left font-bold text-grey-two text-sm border-b border-b-grey-six dark:border-b-dark-grey-six dark:text-white"
+                    >
+                      ASK
+                    </td>
+                  </tr>
+                  <!-- Dubai Port Ends here -->
+                </tbody>
+              </table>
+
+              <!-- Special USE Table ends here -->
+
+              <!-- Additional Options of UAE Starts here -->
+
+              <div class="flex flex-wrap gap-y-2">
+                <div class="mt-3 w-full lg:w-1/2">
+                  <p
+                    class="font-semibold text-grey-two text-xl dark:text-dark-grey-four-color"
+                  >
+                    Additional Options
+                  </p>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piMarineInsuranceUAE"
+                  >
+                    <input type="checkbox" id="piMarineInsuranceUAE" />
+                    <span class="checkmark"></span>
+                    Marine Insurance
+                  </label>
+                  <label
+                    class="custom-checkbox dark:text-dark-grey-four-color"
+                    for="piOtozWarrentyUAE"
+                  >
+                    <input type="checkbox" id="piOtozWarrentyUAE" />
+                    <span class="checkmark"></span>
+                    Otoz.ai Warranty
+                  </label>
+                  <p class="text-xs mt-1 font-normal text-red-500">
+                    Otoz.ai warranty is USD 80 per vehicle
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between px-4 bg-[#1735590d] mt-2 py-2 dark:bg-table-dark-body"
+              >
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  Total Price
+                </p>
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  CIF <span class="pl-2 text-red-600 fontbo">AED 72,646</span>
+                </p>
+              </div>
+
+              <!-- Additional Options of UAE Ends Here -->
             </div>
 
             <!-- Simple Estimate Ends Here -->
@@ -927,9 +973,9 @@
         <!-- Simple Estimate and Advanced Estimate ends here  -->
 
         <div
-          class="py-2 px-3 border border-grey-seven bg-white rounded col-span-2 xl:col-span-1"
+          class="py-2 px-3 border border-grey-seven bg-white rounded col-span-2 xl:col-span-1 dark:bg-dark-background-color dark:border-dark-grey-seven"
         >
-          <p class="text-grey-two font-medium">Discounts</p>
+          <p class="text-grey-two font-medium dark:text-dark-grey-four-color">Discounts</p>
           <div
             class="border border-yellow-400 bg-[#f6bb3b1a] px-2 rounded mt-1"
           >
@@ -1110,7 +1156,9 @@
         "active-tab",
         "font-bold",
         "border-primary-color",
-        "text-primary-color"
+        "text-primary-color",
+        "dark:border-dark-primary-color",
+        "dark:text-dark-primary-color"
       );
       piSimpleTabEst.classList.remove(
         "font-normal",
@@ -1121,7 +1169,9 @@
         "active-tab",
         "font-bold",
         "border-primary-color",
-        "text-primary-color"
+        "text-primary-color",
+        "dark:border-dark-primary-color",
+        "dark:text-dark-primary-color"
       );
       piAdvancedTabEst.classList.add(
         "font-normal",
@@ -1140,7 +1190,9 @@
         "active-tab",
         "font-bold",
         "border-primary-color",
-        "text-primary-color"
+        "text-primary-color",
+        "dark:border-dark-primary-color",
+        "dark:text-dark-primary-color"
       );
       piAdvancedTabEst.classList.remove(
         "font-normal",
@@ -1151,7 +1203,9 @@
         "active-tab",
         "font-bold",
         "border-primary-color",
-        "text-primary-color"
+        "text-primary-color",
+        "dark:border-dark-primary-color",
+        "dark:text-dark-primary-color"
       );
       piSimpleTabEst.classList.add(
         "font-normal",
