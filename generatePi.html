@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body class="dark:bg-dark-background-color">
     <!-- Navbar Starts here -->
     <nav
       class="flex justify-between items-center py-3 px-4 bg-white dark:bg-dark-background-color sticky w-full top-0 z-20"
@@ -207,12 +207,14 @@
     <!-- Navbar Ends here -->
 
     <!-- Content Section Starts Here -->
-    <div class="bg-grey-eight px-4 py-2 mb-18">
+    <div class="bg-grey-eight px-4 py-2 mb-18 dark:bg-dark-background-color">
       <div class="grid grid-cols-2 xl:grid-cols-3 gap-3">
         <!-- Import your car grid -->
         <div class="xl:col-span-2">
-          <p class="text-[24px] text-grey-two font-bold">Import Your Car</p>
-          <p class="text-base text-grey-two font-normal">
+          <p class="text-[24px] text-grey-two font-bold dark:text-grey-six">
+            Import Your Car
+          </p>
+          <p class="text-base text-grey-two font-normal dark:text-grey-six">
             Fast. Reliable. Hassle-Free Vehicle Shipping.
           </p>
         </div>
@@ -220,12 +222,16 @@
 
         <!-- Grand total price grid starts -->
         <div
-          class="border border-primary-color bg-[#1735591a] rounded flex justify-between items-center"
+          class="border border-primary-color bg-[#1735591a] rounded flex justify-between items-center dark:border-dark-primary-color"
         >
-          <p class="px-3 text-grey-two text-xl font-semibold">
+          <p
+            class="px-3 text-grey-two text-xl font-semibold dark:text-grey-six"
+          >
             Grand Total Price
           </p>
-          <p class="px-3 text-xl font-semibold text-grey-two">
+          <p
+            class="px-3 text-xl font-semibold text-grey-two dark:text-grey-six"
+          >
             CIF <span class="font-bold text-red-500">USD 72,646</span>
           </p>
         </div>
@@ -233,19 +239,21 @@
 
         <!-- Simple Estimate and Advanced Estimate starts here -->
         <div
-          class="col-span-2 border border-grey-seven bg-white rounded py-2 px-3 drop-shadow-sm"
+          class="col-span-2 border border-grey-seven bg-white rounded py-2 px-3 drop-shadow-sm dark:bg-dark-background-color"
         >
           <!-- Tab Switcher Start -->
-          <div class="flex border-b border-grey-six">
+          <div
+            class="flex border-b border-grey-six dark:border-dark-primary-color"
+          >
             <button
               id="piSimpleTabEst"
-              class="tab-btn cursor-pointer active-tab py-2 text-sm md:text-base font-bold border-b-2 border-primary-color text-primary-color"
+              class="tab-btn cursor-pointer active-tab py-2 text-sm md:text-base font-bold border-b-2 border-primary-color text-primary-color dark:border-dark-primary-color dark:text-dark-primary-color"
             >
               Simple Estimate
             </button>
             <button
               id="piAdvancedTabEst"
-              class="tab-btn cursor-pointer mx-4 py-2 text-sm md:text-base font-normal border-b-2 border-transparent text-grey-four hover:text-primary-color"
+              class="tab-btn cursor-pointer mx-4 py-2 text-sm md:text-base font-normal border-b-2 border-transparent text-grey-four hover:text-primary-color dark:hover:text-dark-primary-color"
             >
               Advanced Estimate
             </button>
@@ -259,13 +267,15 @@
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-3">
                 <!-- Country Starts Here -->
                 <div>
-                  <label for="searchPiCountry" class="text-sm mt-3"
+                  <label
+                    for="searchPiCountry"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
                     >Country <span class="text-red-700">*</span>
                   </label>
                   <div class="relative w-full mt-1">
                     <select
                       name="searchStockCountry"
-                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
                     >
                       <option value="" class="text-grey-six text-sm">
                         Select Country
@@ -295,13 +305,13 @@
 
                 <!-- Currency Starts Here -->
                 <div>
-                  <label for="searchPiCurrency" class="text-sm mt-3"
+                  <label for="searchPiCurrency" class="text-sm mt-3 dark:text-dark-grey-four-color"
                     >Currency
                   </label>
                   <div class="relative w-full mt-1">
                     <select
                       name="searchPiCurrency"
-                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
                     >
                       <option value="" class="text-grey-six text-sm">
                         Select Currency
@@ -331,14 +341,14 @@
 
                 <!-- Shipping Method Starts here -->
                 <div>
-                  <p class="text-sm mt-3">Shipping Method</p>
+                  <p class="text-sm mt-3 dark:text-dark-grey-four-color">Shipping Method</p>
                   <div class="flex gap-x-4">
-                    <label class="custom-checkbox">
+                    <label class="custom-checkbox dark:text-dark-grey-four-color">
                       <input type="checkbox" id="piRoro" />
                       <span class="checkmark"></span>
                       RoRo
                     </label>
-                    <label class="custom-checkbox">
+                    <label class="custom-checkbox dark:text-dark-grey-four-color">
                       <input type="checkbox" id="piContainer" />
                       <span class="checkmark"></span>
                       Container
