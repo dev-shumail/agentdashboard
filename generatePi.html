@@ -445,6 +445,8 @@
                 </table>
               </div>
 
+              <!-- Arrival Port Table Ends here -->
+
               <!-- 2nd Table starts here -->
               <div class="overflow-x-auto mt-2 w-full">
                 <table class="min-w-full divide-y divide-gray-200">
@@ -975,7 +977,9 @@
         <div
           class="py-2 px-3 border border-grey-seven bg-white rounded col-span-2 xl:col-span-1 dark:bg-dark-background-color dark:border-dark-grey-seven"
         >
-          <p class="text-grey-two font-medium dark:text-dark-grey-four-color">Discounts</p>
+          <p class="text-grey-two font-medium dark:text-dark-grey-four-color">
+            Discounts
+          </p>
           <div
             class="border border-yellow-400 bg-[#f6bb3b1a] px-2 rounded mt-1"
           >
@@ -993,7 +997,7 @@
                 type="text"
                 name=""
                 id=""
-                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three"
+                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
                 placeholder="Search By Ref. No"
               />
             </div>
@@ -1002,12 +1006,119 @@
                 type="text"
                 name=""
                 id=""
-                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three"
+                class="border border-grey-six text-sm w-full rounded py-1.5 outline-none px-3 text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
                 placeholder="Promotion Code/Veh"
               />
             </div>
           </div>
           <!-- Search and promotion code div ends here -->
+
+          <!-- Discount Table Starts here -->
+
+          <div class="mt-4 overflow-x-auto w-full"></div>
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead
+              class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
+            >
+              <tr class="dark:text-dark-grey-two">
+                <th class="px-2 py-3 font-semibold">Car Detail</th>
+                <th class="px-2 py-3 font-semibold">Price</th>
+                <th class="px-2 py-3 font-semibold">Discount & Adjustments</th>
+              </tr>
+            </thead>
+
+            <tbody
+              class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:divide-none"
+            >
+              <tr class="align-middle dark:text-white">
+                <!-- Car Detail -->
+                <td
+                  class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <span> BX653268 </span><br />
+                  <span> TOYOTA Raize </span><br />
+                  <span> 5BA-A201A 2023/4 </span><br />
+                  <span> (Japan stock) </span>
+                </td>
+
+                <!-- Price -->
+                <td
+                  class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <span>USD</span><br />
+                  <span>15,390</span>
+                </td>
+
+                <!-- Discount -->
+
+                <td
+                  class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <div class="grid grid-cols-2 gap-x-1">
+                    <input
+                      type="text"
+                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                      placeholder="Discount"
+                    />
+                    <input
+                      type="text"
+                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                      placeholder="Adjustment"
+                    />
+                  </div>
+                  <div class="text-xs text-red-500 mt-2">
+                    Discount Limit: USD -63
+                  </div>
+                </td>
+              </tr>
+
+              <!-- 2nd row starts -->
+              <tr class="align-middle dark:text-white">
+                <!-- Car Detail -->
+                <td
+                  class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <span> BX653268 </span><br />
+                  <span> TOYOTA Raize </span><br />
+                  <span> 5BA-A201A 2023/4 </span><br />
+                  <span> (Japan stock) </span>
+                </td>
+
+                <!-- Price -->
+                <td
+                  class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <span>USD</span><br />
+                  <span>15,390</span>
+                </td>
+
+                <!-- Discount -->
+
+                <td
+                  class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                >
+                  <div class="grid grid-cols-2 gap-x-1">
+                    <input
+                      type="text"
+                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                      placeholder="Discount"
+                    />
+                    <input
+                    type="text"
+                    class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                    placeholder="Adjustment"
+                  />
+                  </div>
+                  <div class="text-xs text-red-500 mt-2">
+                    Discount Limit: USD -63
+                  </div>
+                </td>
+              </tr>
+              <!-- 2nd row ends -->
+            </tbody>
+          </table>
+
+          <!-- Discount Table Ends here -->
         </div>
       </div>
     </div>
