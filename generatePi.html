@@ -962,10 +962,521 @@
             <!-- Advanced Estimates starts here -->
 
             <div id="piContentAdvancedEst" class="tab-content hidden">
-              <p class="text-grey-four text-sm md:text-base">
-                This is the Advanced Estimate content. Add your advanced
-                estimate fields or options here.
-              </p>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+                <!-- Country Starts Here -->
+                <div>
+                  <label
+                    for="searchAdvancedPiCountry"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Country <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="searchAdvancedPiCountry"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Country Ends Here -->
+
+                <!-- Arrival Port Starts Here -->
+
+                <div>
+                  <label
+                    for="searchAdvancedPiArrivalPort"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Arrival Port <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="searchAdvancedPiArrivalPort"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Arrival Port Ends here -->
+
+                <!-- Local Agents Starts Here -->
+                <div>
+                  <label
+                    for="localAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Local Agent <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="localAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Local Agent Ends Here -->
+
+                <!-- Clearing Starts Here -->
+                <div>
+                  <label
+                    for="clearingAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Clearing
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="clearingAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Clearing Ends Here -->
+
+                <!-- Delivery Starts Here -->
+                <div>
+                  <label
+                    for="deliveryAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Delivery
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="deliveryAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Delivery Ends Here -->
+
+                <!-- Delivery To Starts Here -->
+                <div>
+                  <label
+                    for="deliveryToAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Delivery To
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="deliveryToAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Delivery To Ends Here -->
+
+                <!-- Ref Container Plan No. Starts Here -->
+                <div>
+                  <label
+                    for="refContainerAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Ref Container Plan No. <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="refContainerAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ref Container Plan No. Ends Here -->
+
+                <!-- Ship Type Starts Here -->
+                <div>
+                  <label
+                    for="shipTypeAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Ship Type <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="shipTypeAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ship Type Ends Here -->
+
+                <!-- Container Type Starts Here -->
+                <div>
+                  <label
+                    for="containerTypeAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Container Type <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="containerTypeAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Container Type Ends Here -->
+
+                <!-- Assumption Starts Here -->
+                <div>
+                  <label
+                    for="assumptionAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Assumption <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="assumptionAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!--  Assumption Ends Here -->
+
+                <!-- Price Quotation Starts Here -->
+                <div>
+                  <label
+                    for="priceQuotationAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Price Quotation <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="priceQuotationAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!--  Price Quotation Ends Here -->
+
+                <!-- Currency Starts Here -->
+                <div>
+                  <label
+                    for="currencyConverterAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Currency <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="currencyConverterAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!--  Currency Ends Here -->
+
+                <!-- Otoz.AI Warranty Starts Here -->
+                <div>
+                  <label
+                    for="otozAiWarrantyAgentsAdvanced"
+                    class="text-sm mt-3 dark:text-dark-grey-four-color"
+                    >Otoz.AI Warranty <span class="text-red-700">*</span>
+                  </label>
+                  <div class="relative w-full mt-1">
+                    <select
+                      name="otozAiWarrantyAgentsAdvanced"
+                      class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                    >
+                      <option value="" class="text-grey-six text-sm">
+                        Select
+                      </option>
+                      <option value="P">Pakistan</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                    >
+                      <svg
+                        width="11"
+                        height="8"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!--  Otoz. AI Warrenty Ends Here -->
+              </div>
+
+              <div class="mt-4">
+                <button
+                  class="bg-primary-color px-6 py-2 border border-primary-color group rounded-[5px] text-white cursor-pointer hover:bg-transparent hover:text-primary-color dark:bg-dark-primary-color dark:border-dark-primary-color dark:hover:text-dark-primary-color"
+                >
+                  Generate
+                </button>
+              </div>
+
+              <div
+                class="flex justify-between px-4 bg-[#1735590d] mt-4 py-2 dark:bg-table-dark-body"
+              >
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  Total Price
+                </p>
+                <p class="text-grey-two text-xl font-semibold dark:text-white">
+                  CIF <span class="pl-2 text-red-600 fontbo">AED 72,646</span>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -1015,108 +1526,111 @@
 
           <!-- Discount Table Starts here -->
 
-          <div class="mt-4 overflow-x-auto w-full"></div>
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead
-              class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
-            >
-              <tr class="dark:text-dark-grey-two">
-                <th class="px-2 py-3 font-semibold">Car Detail</th>
-                <th class="px-2 py-3 font-semibold">Price</th>
-                <th class="px-2 py-3 font-semibold">Discount & Adjustments</th>
-              </tr>
-            </thead>
+          <div class="mt-4 overflow-x-auto w-full">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead
+                class="text-sm md:text-[15px] text-grey-two rounded bg-[#fafafa] dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
+              >
+                <tr class="dark:text-dark-grey-two">
+                  <th class="px-2 py-3 font-semibold">Car Detail</th>
+                  <th class="px-2 py-3 font-semibold">Price</th>
+                  <th class="px-2 py-3 font-semibold">
+                    Discount & Adjustments
+                  </th>
+                </tr>
+              </thead>
 
-            <tbody
-              class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:divide-none"
-            >
-              <tr class="align-middle dark:text-white">
-                <!-- Car Detail -->
-                <td
-                  class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <span> BX653268 </span><br />
-                  <span> TOYOTA Raize </span><br />
-                  <span> 5BA-A201A 2023/4 </span><br />
-                  <span> (Japan stock) </span>
-                </td>
+              <tbody
+                class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:divide-none"
+              >
+                <tr class="align-middle dark:text-white">
+                  <!-- Car Detail -->
+                  <td
+                    class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <span> BX653268 </span><br />
+                    <span> TOYOTA Raize </span><br />
+                    <span> 5BA-A201A 2023/4 </span><br />
+                    <span> (Japan stock) </span>
+                  </td>
 
-                <!-- Price -->
-                <td
-                  class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <span>USD</span><br />
-                  <span>15,390</span>
-                </td>
+                  <!-- Price -->
+                  <td
+                    class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <span>USD</span><br />
+                    <span>15,390</span>
+                  </td>
 
-                <!-- Discount -->
+                  <!-- Discount -->
 
-                <td
-                  class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <div class="grid grid-cols-2 gap-x-1">
-                    <input
-                      type="text"
-                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
-                      placeholder="Discount"
-                    />
-                    <input
-                      type="text"
-                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
-                      placeholder="Adjustment"
-                    />
-                  </div>
-                  <div class="text-xs text-red-500 mt-2">
-                    Discount Limit: USD -63
-                  </div>
-                </td>
-              </tr>
+                  <td
+                    class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <div class="grid grid-cols-2 gap-x-1">
+                      <input
+                        type="text"
+                        class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                        placeholder="Discount"
+                      />
+                      <input
+                        type="text"
+                        class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                        placeholder="Adjustment"
+                      />
+                    </div>
+                    <div class="text-xs text-red-500 mt-2">
+                      Discount Limit: USD -63
+                    </div>
+                  </td>
+                </tr>
 
-              <!-- 2nd row starts -->
-              <tr class="align-middle dark:text-white">
-                <!-- Car Detail -->
-                <td
-                  class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <span> BX653268 </span><br />
-                  <span> TOYOTA Raize </span><br />
-                  <span> 5BA-A201A 2023/4 </span><br />
-                  <span> (Japan stock) </span>
-                </td>
+                <!-- 2nd row starts -->
+                <tr class="align-middle dark:text-white">
+                  <!-- Car Detail -->
+                  <td
+                    class="block px-2 py-3 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <span> BX653268 </span><br />
+                    <span> TOYOTA Raize </span><br />
+                    <span> 5BA-A201A 2023/4 </span><br />
+                    <span> (Japan stock) </span>
+                  </td>
 
-                <!-- Price -->
-                <td
-                  class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <span>USD</span><br />
-                  <span>15,390</span>
-                </td>
+                  <!-- Price -->
+                  <td
+                    class="px-2 py-2 text-sm border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <span>USD</span><br />
+                    <span>15,390</span>
+                  </td>
 
-                <!-- Discount -->
+                  <!-- Discount -->
 
-                <td
-                  class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
-                >
-                  <div class="grid grid-cols-2 gap-x-1">
-                    <input
-                      type="text"
-                      class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
-                      placeholder="Discount"
-                    />
-                    <input
-                    type="text"
-                    class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
-                    placeholder="Adjustment"
-                  />
-                  </div>
-                  <div class="text-xs text-red-500 mt-2">
-                    Discount Limit: USD -63
-                  </div>
-                </td>
-              </tr>
-              <!-- 2nd row ends -->
-            </tbody>
-          </table>
+                  <td
+                    class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                  >
+                    <div class="grid grid-cols-2 gap-x-1">
+                      <input
+                        type="text"
+                        class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                        placeholder="Discount"
+                      />
+                      <input
+                        type="text"
+                        class="border border-grey-six text-sm w-full rounded py-1.5 px-3 outline-none text-grey-three dark:text-dark-grey-four-color dark:border-dark-grey-six dark:placeholder:text-grey-four"
+                        placeholder="Adjustment"
+                      />
+                    </div>
+                    <div class="text-xs text-red-500 mt-2">
+                      Discount Limit: USD -63
+                    </div>
+                  </td>
+                </tr>
+                <!-- 2nd row ends -->
+              </tbody>
+            </table>
+          </div>
 
           <!-- Discount Table Ends here -->
         </div>
