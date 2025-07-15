@@ -206,6 +206,171 @@
     </nav>
     <!-- Navbar Ends here -->
 
+    <!-- Content Section Starts Here -->
+    <div class="bg-grey-eight px-4 py-2 mb-18 dark:bg-dark-background-color">
+      <!-- Import your car starts -->
+
+      <div>
+        <p class="text-[24px] text-grey-two font-bold dark:text-grey-six">
+          Import Your Car
+        </p>
+        <p class="text-base text-grey-two font-normal dark:text-grey-six">
+          Fast. Reliable. Hassle-Free Vehicle Shipping.
+        </p>
+      </div>
+
+      <!-- Import your car end -->
+      <div
+        class="bg-white rounded mt-3 dark:bg-dark-background-color dark:border-dark-grey-seven"
+      >
+        <div
+          class="flex justify-between flex-wrap px-4 rounded-t py-2 dark:bg-dark-cards-color bg-white text-grey-two dark:text-white"
+        >
+          <div class="">
+            <p>Selected Cars</p>
+          </div>
+        </div>
+
+        <!-- Table of Cars Starts here -->
+        <div class="overflow-x-auto w-full rounded-b">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead
+              class="bg-gray-50 dark:bg-table-dark-head dark:border dark:border-dark-grey-six"
+            >
+              <tr>
+                <!-- 2: Car Image -->
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
+                >
+                  Car Image
+                </th>
+                <!-- 3: Reference No. + Make/Model/Code -->
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
+                >
+                  Reference No.
+                </th>
+                <!-- 4-12: Placeholders -->
+                <th
+                  class="py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
+                >
+                  Make <br />
+                  Model
+                  <br />
+                  Model Code
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
+                >
+                  Year <br />
+                  Mileage
+                </th>
+
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium text-[#262626] uppercase tracking-wider dark:text-dark-grey-four-color"
+                >
+                  Stock Area <br />
+                  Stock Location
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              id="car-table-body"
+              class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four"
+            >
+              <!-- Example Row 1 start -->
+              <tr class="transition-colors duration-200 dark:text-white">
+                <!-- 2: Car Image -->
+                <td class="px-4 py-2">
+                  <img
+                    src="assets/SUV.svg"
+                    alt="Car"
+                    class="w-16 h-10 object-contain rounded"
+                  />
+                </td>
+                <!-- 3: Reference No. + Make/Model/Code -->
+                <td class="px-4 py-2">
+                  <div class="text-[#1890ff] font-normal text-[15px]">
+                    <a href="#"> BX289851 </a>
+                  </div>
+                </td>
+                <!-- 4-12: Placeholders -->
+
+                <td>
+                  <div class="text-[13px] flex flex-col py-1">
+                    <span>Toyota</span>
+                    <span>Raize</span>
+                    <span>5BA-A200A (10,924)</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="px-4 py-2 text-[13px] flex flex-col">
+                    <span>2020/11</span>
+                    <span>40,000 km</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="px-4 py-2 flex flex-col text-[13px]">
+                    <span> KYUSHU </span>
+                    <span>Kanda (Kandakoun) </span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Example Row 1 end -->
+
+              <!-- Example Row 2 starts -->
+              <tr class="transition-colors duration-200 dark:text-white">
+                <!-- 2: Car Image -->
+                <td class="px-4 py-2">
+                  <img
+                    src="assets/SUV.svg"
+                    alt="Car"
+                    class="w-16 h-10 object-contain rounded"
+                  />
+                </td>
+                <!-- 3: Reference No. + Make/Model/Code -->
+                <td class="px-4 py-2">
+                  <div class="text-[#1890ff] font-normal text-[15px]">
+                    <a href="#"> BX289851 </a>
+                  </div>
+                </td>
+                <!-- 4-12: Placeholders -->
+
+                <td>
+                  <div class="text-[13px] flex flex-col py-1">
+                    <span>Toyota</span>
+                    <span>Raize</span>
+                    <span>5BA-A200A (10,924)</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="px-4 py-2 text-[13px] flex flex-col">
+                    <span>2020/11</span>
+                    <span>40,000 km</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="px-4 py-2 flex flex-col text-[13px]">
+                    <span> KYUSHU </span>
+                    <span>Kanda (Kandakoun) </span>
+                  </div>
+                </td>
+              </tr>
+              <!-- Example Row 2 ended -->
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Table of cars ends here -->
+      </div>
+    </div>
+
+    <!-- Content Section Ends Here -->
+
     <!-- Footer Starts here -->
     <footer
       class="fixed w-full bottom-0 z-20 bg-white dark:bg-dark-background-color py-3 px-4 flex justify-between items-center"
@@ -330,7 +495,6 @@
         </a>
       </div>
     </footer>
-
     <!-- Footer Ends here -->
   </body>
   <script src="./themeSwitcher.js"></script>
