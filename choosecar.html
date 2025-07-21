@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Choose Car</title>
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
@@ -246,7 +246,8 @@
               />
 
               <button
-                class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer flex border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300"
+                id="downlaodStockList"
+                class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer flex border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300 downlaodStockList"
               >
                 Download
                 <span class="hidden xl:block xl:pl-1"> Stock List</span>
@@ -513,7 +514,7 @@
 
                 <td class="px-4 py-2 text-[13px]">
                   <div class="flex gap-x-1">
-                    <a href="#">
+                    <a href="./cargallery.html">
                       <img
                         src="./assets/galleryIcon.svg"
                         alt="galleryIcon"
@@ -802,9 +803,370 @@
       </div>
     </footer>
 
+    <!-- download Stock List sidebar -->
+
+    <!-- Sidebar Filter Modal -->
+    <div
+      id="sidebarFilterOverlay"
+      class="fixed inset-0 z-50 bg-[#38383880] opacity-0 hidden transition-opacity duration-300"
+      aria-modal="true"
+      role="dialog"
+    >
+      <aside
+        id="sidebarFilter"
+        class="fixed right-0 top-0 h-full w-full max-w-xl bg-white dark:bg-dark-background-color shadow-lg flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out"
+        tabindex="-1"
+        aria-label="All Filters"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-6 py-4 border-b-2 border-[#d9d9d9]"
+        >
+          <h2 class="text-xl font-semibold text-grey-two dark:text-white">
+            Stock List
+          </h2>
+          <button
+            id="closeSidebarFilter"
+            class="text-4xl cursor-pointer font-normal text-primary-color hover:text-[#c53030] focus:outline-none dark:text-white"
+            aria-label="Close sidebar"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+          <section class="p-6" data-panel="body">
+            <div
+              class="border-2 border-grey-seven rounded px-2 pt-2 pb-3 text-grey-two dark:border-dark-grey-six dark:text-dark-grey-four-color"
+            >
+              <p class="font-semibold text-lg">Currency</p>
+              <p class="font-light mt-2 text-base">Currency</p>
+
+              <div class="flex gap-x-3 items-center py-1.5">
+                <div class="flex gap-x-0.5">
+                  <input
+                    type="radio"
+                    id="downloadInJPY"
+                    value="downloadInJPY"
+                    name="entity"
+                    class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                  />
+                  <label
+                    for="downloadInJPY"
+                    class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                  >
+                    Unset
+                  </label>
+                </div>
+                <div class="flex gap-x-0.5">
+                  <input
+                    type="radio"
+                    id="downloadInUSD"
+                    value="downloadInUSD"
+                    name="entity"
+                    class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                  />
+                  <label
+                    for="downloadInUSD"
+                    class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                  >
+                    Individual
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-3 border-2 border-grey-seven rounded px-2 pt-2 pb-3 text-grey-two dark:border-dark-grey-six dark:text-dark-grey-four-color"
+            >
+              <p class="font-semibold text-lg">Total Price Calculator</p>
+              <!-- Country Starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Port
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Port
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Country Ends here -->
+
+              <div class="mt-6 overflow-x-auto w-full">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <tbody
+                    class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four"
+                  >
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Shipping Method
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="shipping-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">RoRo</span>
+                        </label>
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="shipping-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Container</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Insurance
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="insurance-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Yes</span>
+                        </label>
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="insurance-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">No</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Inspection
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="inspection-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Yes</span>
+                        </label>
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="inspection-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">No</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Certificate
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="certificate-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Yes</span>
+                        </label>
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="certificate-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">No</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-base border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Otoz.ai Warranty
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="iquique-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">Yes</span>
+                        </label>
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six"
+                      >
+                        <label class="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="iquique-option"
+                            checked
+                            class="accent-primary-color dark:accent-dark-primary-color"
+                          />
+                          <span class="font-light text-sm">No</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-base text-red-600 font-medium mt-3">
+                103 units will be downloaded. Are you sure?
+              </p>
+              <p class="text-sm text-red-500 font-light">
+                Vehicles that cannot be selected will not be output to the stock
+                list
+              </p>
+            </div>
+            <div class="mt-5">
+              <button
+                class="w-full py-2 text-center bg-primary-color border border-primary-color dark:bg-dark-primary-color text-white hover:text-primary-color cursor-pointer hover:bg-transparent dark:border-dark-primary-color dark:hover:text-dark-primary-color transition-all duration-300 rounded"
+              >
+                Download
+              </button>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!-- download Stock List sidebar ends here -->
     <!-- Footer Ends here -->
     <script src="src/tableSelect.js"></script>
   </body>
 
   <script src="./themeSwitcher.js"></script>
+
+  <script>
+    // Sidebar open/close logic
+    const downloadStockList = document.getElementById("downlaodStockList");
+    const sidebarOverlay = document.getElementById("sidebarFilterOverlay");
+    const sidebar = document.getElementById("sidebarFilter");
+    const closeSidebarBtn = document.getElementById("closeSidebarFilter");
+
+    function openSidebar() {
+      sidebarOverlay.classList.remove("hidden");
+
+      requestAnimationFrame(() => {
+        sidebarOverlay.classList.add("opacity-100");
+        sidebar.classList.remove("translate-x-full");
+      });
+      sidebar.focus();
+    }
+
+    function closeSidebar() {
+      sidebarOverlay.classList.remove("opacity-100");
+      sidebar.classList.add("translate-x-full");
+
+      setTimeout(() => {
+        sidebarOverlay.classList.add("hidden");
+      }, 300); // match the Tailwind transition duration
+    }
+
+    downloadStockList.addEventListener("click", openSidebar);
+    closeSidebarBtn.addEventListener("click", closeSidebar);
+
+    // Close sidebar on overlay click
+    sidebarOverlay.addEventListener("click", (e) => {
+      if (e.target === sidebarOverlay) closeSidebar();
+    });
+
+    // Close on Escape key
+    window.addEventListener("keydown", (e) => {
+      if (!sidebarOverlay.classList.contains("hidden") && e.key === "Escape")
+        closeSidebar();
+    });
+  </script>
+  <!-- End Sidebar Filter Modal -->
 </html>

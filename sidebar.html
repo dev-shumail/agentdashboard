@@ -238,8 +238,8 @@
 
     <script>
       // Sidebar open/close logic
-      const seeAllBtn = document.querySelector(
-        "button.text-primary-color.font-bold"
+      const downloadStockList = document.querySelector(
+        "downlaodStockList"
       );
       const sidebarOverlay = document.getElementById("sidebarFilterOverlay");
       const sidebar = document.getElementById("sidebarFilter");
@@ -272,7 +272,7 @@
           sidebarOverlay.classList.add("hidden");
         }, 300);
       }
-      seeAllBtn.addEventListener("click", openSidebar);
+      downloadStockList.addEventListener("click", openSidebar);
       closeSidebarBtn.addEventListener("click", closeSidebar);
       applyBtn.addEventListener("click", closeSidebar);
 
