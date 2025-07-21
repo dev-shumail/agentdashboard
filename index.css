@@ -103,3 +103,8 @@ label {
   background-color: var(--dark-primary-color);
   border: 1px solid var(--dark-primary-color);
 }
+
+
+.gallery-thumb{
+  cursor: pointer;
+}
