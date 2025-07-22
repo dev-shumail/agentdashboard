@@ -221,7 +221,7 @@
 
       <!-- Import your car end -->
       <div
-        class="bg-white rounded mt-3 dark:bg-dark-background-color dark:border-dark-grey-seven"
+        class="rounded mt-3 dark:bg-dark-background-color dark:border-dark-grey-seven"
       >
         <div
           class="flex justify-between flex-wrap px-4 rounded-t py-2 dark:bg-dark-cards-color bg-white text-grey-two dark:text-white"
@@ -648,8 +648,1356 @@
           <!-- Condition Ends Here -->
 
           <!-- Consignee Information starts-->
-          
+          <div
+            class="col-span-2 mt-4 pb-4 bg-white border border-grey-six rounded py-2 px-3 dark:bg-dark-background-color"
+          >
+            <div class="flex gap-x-2 items-center">
+              <p class="dark:text-white">Consignee</p>
+              <p class="dark:text-white pl-5 text-xs">Information</p>
+              <div
+                class="bg-yellow-400 px-3 py-1.5 flex items-center rounded border border-yellow-400 hover:bg-transparent transition-all duration-300 group cursor-pointer"
+              >
+                <input type="checkbox" name="" id="sameAsCustomer" />
+                <label
+                  for="sameAsCustomer"
+                  class="pl-1 text-sm dark:text-grey-two group-hover:text-yellow-400"
+                  >Same as Customer</label
+                >
+              </div>
+              <button
+                id="downlaodStockList"
+                class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300 downlaodStockList"
+              >
+                Consignee List
+              </button>
+            </div>
+            <div
+              class="grid grid-cols-2 xl:grid-cols-3 items-center gap-x-3 grid-rows-3"
+            >
+              <!-- customer name starts -->
+              <div class="w-full">
+                <label
+                  for="cstmrName"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Name <span class="text-red-700">*</span>
+                </label>
+                <input
+                  id="cstmrName"
+                  type="text"
+                  placeholder="Enter Customer Name"
+                  class="border border-grey-six w-full mt-1 outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer name ends here -->
+
+              <!-- Country Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Country <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Country
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Country Ends here -->
+
+              <!-- Province / State Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Province / State <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Province
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Province / State Ends here -->
+
+              <!-- Entity Types Starts -->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Entity Type
+                </p>
+                <div class="flex space-x-1 lg:space-x-4 items-center py-1.5">
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrunset"
+                      value="unset"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrunset"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Unset
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrindividual"
+                      value="individual"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrindividual"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Individual
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrcorporation"
+                      value="corporation"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrcorporation"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Corporation
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- Entity Types Ends Here -->
+
+              <!-- Date of Birth starts-->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Date of Birth
+                </p>
+
+                <div class="flex gap-x-2">
+                  <!-- Year Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Year
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Year Ends -->
+
+                  <!-- Month Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Month
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Month Ends -->
+
+                  <!-- Date Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Date
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Date Ends -->
+                </div>
+
+                <div class="flex gap-x-2"></div>
+              </div>
+              <!-- Date of Birth Ends -->
+
+              <!-- Tin Number starts -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTIN"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color cursor-not-allowed"
+                  >TIN
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTIN"
+                  placeholder="Enter Tin"
+                  disabled
+                  class="border border-grey-six mt-1 w-full outline-none cursor-not-allowed rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- TIN ends here -->
+
+              <!-- Customer Email starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Email <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Customer Email"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer Email Ends here -->
+
+              <!-- Telephone 01 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 01 <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 01"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 01 Ends here -->
+
+              <!-- Telephone 02 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 02
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 02"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 02 Ends here -->
+
+              <!-- Telephone 03 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 03
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 03"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 03 Ends here -->
+
+              <!-- Postal Code starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Postal Code
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Postal Code"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Postal Code Ends here -->
+              <!-- Fax Number starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Fax
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Fax Number"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Fax Number Ends here -->
+
+              <!-- City Starts here -->
+              <div class="w-full mt-2.5">
+                <label
+                  for="cstrcityname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >City <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcityname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select City
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- City Ends here -->
+
+              <!-- Consignee Address starts -->
+              <div class="w-full mt-2.5 xl:col-span-2">
+                <label
+                  for="cstmrAddress"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Address <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrAddress"
+                  placeholder="Enter Customer Address"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:text-grey-six dark:border-dark-grey-six mt-1"
+                />
+              </div>
+              <!-- Consignee Address ends here -->
+            </div>
+          </div>
           <!-- Consignee Information Ends -->
+
+          <!-- Remitter Information starts-->
+          <div
+            class="col-span-2 mt-4 pb-4 bg-white border border-grey-six rounded py-2 px-3 dark:bg-dark-background-color"
+          >
+            <div class="flex gap-x-2 items-center">
+              <p class="dark:text-white">Remitter</p>
+              <p class="dark:text-white pl-5 text-xs">Information</p>
+              <div
+                class="bg-yellow-400 px-3 py-1.5 flex items-center rounded border border-yellow-400 hover:bg-transparent transition-all duration-300 group cursor-pointer"
+              >
+                <input type="checkbox" name="" id="sameAsCustomer" />
+                <label
+                  for="sameAsCustomer"
+                  class="pl-1 text-sm dark:text-grey-two group-hover:text-yellow-400"
+                  >Same as Consignee</label
+                >
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 xl:grid-cols-3 items-center gap-x-3 grid-rows-3"
+            >
+              <!-- customer name starts -->
+              <div class="w-full">
+                <label
+                  for="cstmrName"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Name <span class="text-red-700">*</span>
+                </label>
+                <input
+                  id="cstmrName"
+                  type="text"
+                  placeholder="Enter Customer Name"
+                  class="border border-grey-six w-full mt-1 outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer name ends here -->
+
+              <!-- Country Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Country <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Country
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Country Ends here -->
+
+              <!-- Province / State Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Province / State <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Province
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Province / State Ends here -->
+
+              <!-- Entity Types Starts -->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Entity Type
+                </p>
+                <div class="flex space-x-1 lg:space-x-4 items-center py-1.5">
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrunset"
+                      value="unset"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrunset"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Unset
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrindividual"
+                      value="individual"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrindividual"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Individual
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrcorporation"
+                      value="corporation"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrcorporation"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Corporation
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- Entity Types Ends Here -->
+
+              <!-- Date of Birth starts-->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Date of Birth
+                </p>
+
+                <div class="flex gap-x-2">
+                  <!-- Year Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Year
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Year Ends -->
+
+                  <!-- Month Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Month
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Month Ends -->
+
+                  <!-- Date Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Date
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Date Ends -->
+                </div>
+
+                <div class="flex gap-x-2"></div>
+              </div>
+              <!-- Date of Birth Ends -->
+
+              <!-- Tin Number starts -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTIN"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color cursor-not-allowed"
+                  >TIN
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTIN"
+                  placeholder="Enter Tin"
+                  disabled
+                  class="border border-grey-six mt-1 w-full outline-none cursor-not-allowed rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- TIN ends here -->
+
+              <!-- Customer Email starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Email <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Customer Email"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer Email Ends here -->
+
+              <!-- Telephone 01 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 01 <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 01"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 01 Ends here -->
+
+              <!-- Telephone 02 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 02
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 02"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 02 Ends here -->
+
+              <!-- Telephone 03 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 03
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 03"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 03 Ends here -->
+
+              <!-- Postal Code starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Postal Code
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Postal Code"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Postal Code Ends here -->
+              <!-- Fax Number starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Fax
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Fax Number"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Fax Number Ends here -->
+
+              <!-- City Starts here -->
+              <div class="w-full mt-2.5">
+                <label
+                  for="cstrcityname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >City <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcityname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select City
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- City Ends here -->
+
+              <!-- Consignee Address starts -->
+              <div class="w-full mt-2.5 xl:col-span-2">
+                <label
+                  for="cstmrAddress"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Address <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrAddress"
+                  placeholder="Enter Customer Address"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:text-grey-six dark:border-dark-grey-six mt-1"
+                />
+              </div>
+              <!-- Consignee Address ends here -->
+            </div>
+          </div>
+          <!-- Remitter Information Ends -->
+
+          <!-- Notify Party Information starts-->
+          <div
+            class="col-span-2 mt-4 pb-4 bg-white border border-grey-six rounded py-2 px-3 dark:bg-dark-background-color"
+          >
+            <div class="flex gap-x-2 items-center">
+              <p class="dark:text-white">Notify Party</p>
+              <p class="dark:text-white pl-5 text-xs">Information</p>
+              <div
+                class="bg-yellow-400 px-3 py-1.5 flex items-center rounded border border-yellow-400 hover:bg-transparent transition-all duration-300 group cursor-pointer"
+              >
+                <input type="checkbox" name="" id="sameAsCustomer" />
+                <label
+                  for="sameAsConsignee"
+                  class="pl-1 text-sm dark:text-grey-two group-hover:text-yellow-400"
+                  >Same as Consignee</label
+                >
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 xl:grid-cols-3 items-center gap-x-3 grid-rows-3"
+            >
+              <!-- customer name starts -->
+              <div class="w-full">
+                <label
+                  for="cstmrName"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Name <span class="text-red-700">*</span>
+                </label>
+                <input
+                  id="cstmrName"
+                  type="text"
+                  placeholder="Enter Customer Name"
+                  class="border border-grey-six w-full mt-1 outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer name ends here -->
+
+              <!-- Country Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Country <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Country
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Country Ends here -->
+
+              <!-- Province / State Starts here -->
+              <div class="w-full">
+                <label
+                  for="cstrcountryname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Province / State <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcountryname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select Province
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Province / State Ends here -->
+
+              <!-- Entity Types Starts -->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Entity Type
+                </p>
+                <div class="flex space-x-1 lg:space-x-4 items-center py-1.5">
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrunset"
+                      value="unset"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrunset"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Unset
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrindividual"
+                      value="individual"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrindividual"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Individual
+                    </label>
+                  </div>
+                  <div class="flex gap-x-1 lg:gap-x-2">
+                    <input
+                      type="radio"
+                      id="cstrcorporation"
+                      value="corporation"
+                      name="entity"
+                      class="checked:accent-primary-color dark:checked:accent-dark-primary-color"
+                    />
+                    <label
+                      for="cstrcorporation"
+                      class="gap-x-1 text-xs lg:text-sm dark:text-dark-grey-four-color"
+                    >
+                      Corporation
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- Entity Types Ends Here -->
+
+              <!-- Date of Birth starts-->
+              <div class="mt-2">
+                <p class="text-sm text-grey-two dark:text-dark-grey-four-color">
+                  Date of Birth
+                </p>
+
+                <div class="flex gap-x-2">
+                  <!-- Year Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Year
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Year Ends -->
+
+                  <!-- Month Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Month
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Month Ends -->
+
+                  <!-- Date Starts -->
+                  <div class="w-full">
+                    <div class="relative mt-1">
+                      <select
+                        name="searchMake"
+                        class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                      >
+                        <option value="" class="text-grey-six text-sm">
+                          Date
+                        </option>
+                        <option value="P">Pakistan</option>
+                      </select>
+
+                      <div
+                        class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                      >
+                        <svg
+                          width="11"
+                          height="8"
+                          viewBox="0 0 11 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                            fill="#999999"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Date Ends -->
+                </div>
+
+                <div class="flex gap-x-2"></div>
+              </div>
+              <!-- Date of Birth Ends -->
+
+              <!-- Tin Number starts -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTIN"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color cursor-not-allowed"
+                  >TIN
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTIN"
+                  placeholder="Enter Tin"
+                  disabled
+                  class="border border-grey-six mt-1 w-full outline-none cursor-not-allowed rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- TIN ends here -->
+
+              <!-- Customer Email starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Email <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Customer Email"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Customer Email Ends here -->
+
+              <!-- Telephone 01 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 01 <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 01"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 01 Ends here -->
+
+              <!-- Telephone 02 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 02
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 02"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 02 Ends here -->
+
+              <!-- Telephone 03 starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Telephone 03
+                </label>
+                <input
+                  type="text"
+                  id="cstmrTelNumber"
+                  placeholder="Enter Telephone 03"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Telephone 03 Ends here -->
+
+              <!-- Postal Code starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Postal Code
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Postal Code"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Postal Code Ends here -->
+              <!-- Fax Number starts here -->
+              <div class="w-full mt-2">
+                <label
+                  for="cstmrTelNumber"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Fax
+                </label>
+                <input
+                  type="text"
+                  id="custromerPostalCode"
+                  placeholder="Enter Fax Number"
+                  class="border border-grey-six w-full outline-none mt-1 rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:mt-1 dark:text-grey-six dark:border-dark-grey-six"
+                />
+              </div>
+              <!-- Fax Number Ends here -->
+
+              <!-- City Starts here -->
+              <div class="w-full mt-2.5">
+                <label
+                  for="cstrcityname"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >City <span class="text-red-700">*</span>
+                </label>
+                <div class="relative mt-1">
+                  <select
+                    name="cstrcityname"
+                    class="appearance-none text-sm text-grey-four w-full border border-grey-six py-1.5 px-4 rounded cursor-pointer focus:border-grey-six focus:outline-none dark:bg-dark-background-color dark:border-dark-grey-six dark:text-dark-grey-four-color"
+                  >
+                    <option value="" class="text-grey-six text-sm">
+                      Select City
+                    </option>
+                    <option value="P">Pakistan</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute inset-y-0 m-0 p-0 right-3 flex items-center"
+                  >
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1646 0.5H0.835417C0.555599 0.5 0.399355 0.892476 0.572644 1.16042L5.23723 8.34575C5.37074 8.55142 5.62784 8.55142 5.76277 8.34575L10.4274 1.16042C10.6006 0.892476 10.4444 0.5 10.1646 0.5Z"
+                        fill="#999999"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- City Ends here -->
+
+              <!-- Consignee Address starts -->
+              <div class="w-full mt-2.5 xl:col-span-2">
+                <label
+                  for="cstmrAddress"
+                  class="text-sm text-grey-two dark:text-dark-grey-four-color"
+                  >Address <span class="text-red-700">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cstmrAddress"
+                  placeholder="Enter Customer Address"
+                  class="border border-grey-six w-full outline-none rounded px-2 placeholder:text-grey-six text-sm py-1.5 text-grey-three dark:placeholder:text-grey-three dark:text-grey-six dark:border-dark-grey-six mt-1"
+                />
+              </div>
+              <!-- Consignee Address ends here -->
+            </div>
+          </div>
+          <!-- Notify Party Information Ends -->
+
+          <!--  -->
         </div>
       </div>
     </div>
