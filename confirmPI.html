@@ -1996,10 +1996,58 @@
             </div>
           </div>
           <!-- Notify Party Information Ends -->
-
-          <!--  -->
         </div>
       </div>
+
+      <!-- Payment Method Starts here -->
+      <div class="grid grid-cols-2 gap-x-2 mt-3">
+        <div
+          class="bg-white px-3 border border-grey-six dark:bg-dark-background-color dark:text-white py-2 rounded"
+        >
+          <div class="grid grid-cols-3 gap-x-2">
+            <div><p>Payment Method</p></div>
+            <div class="col-span-2 w-fit">
+              <div
+                class="bg-yellow-400 w-fit px-3 py-1.5 flex items-center rounded border border-yellow-400 hover:bg-transparent transition-all duration-300 group cursor-pointer"
+              >
+                <input type="checkbox" name="" id="payByCredit" />
+                <label
+                  for="payByCredit"
+                  class="pl-1 text-sm dark:text-grey-two group-hover:text-yellow-400"
+                  >Pay By Credit</label
+                >
+              </div>
+              <p class="text-xs mt-3">
+                By selecting, Payment procedure will be sent by email.
+              </p>
+              <p class="text-xs mt-2 text-red-500">
+                It is exceeded Paypal Payable Limit
+              </p>
+              <div
+                class="bg-yellow-400 w-fit px-3 py-1.5 mt-3 flex items-center rounded border border-yellow-400 hover:bg-transparent transition-all duration-300 group cursor-pointer"
+              >
+                <input type="checkbox" name="" id="payByCustomers" />
+                <label
+                  for="payByCustomers"
+                  class="pl-1 text-sm dark:text-grey-two group-hover:text-yellow-400"
+                  >Customer's Exclusive Bank Account</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white px-3 border border-grey-six dark:bg-dark-background-color dark:text-white py-2 rounded overscroll-none "
+        >
+          <p>Message to Otoz.ai Japan</p>
+          <textarea
+            name=""
+            id=""
+            class="w-full border mt-2 resize px-3 py-0.5 min-h-28 outline-none rounded"
+          ></textarea>
+        </div>
+      </div>
+      <!-- Payment Method Ends here -->
     </div>
 
     <!-- Content Section Ends Here -->
