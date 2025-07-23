@@ -665,7 +665,7 @@
                 >
               </div>
               <button
-                id="downlaodStockList"
+                id="consigneeList"
                 class="bg-green-color px-3 py-1.5 outline-none text-white rounded text-sm cursor-pointer border border-green-color hover:bg-transparent hover:text-green-color transition-all duration-300 downlaodStockList"
               >
                 Consignee List
@@ -2037,7 +2037,7 @@
           </div>
         </div>
         <div
-          class="bg-white px-3 border border-grey-six dark:bg-dark-background-color dark:text-white py-2 rounded overscroll-none "
+          class="bg-white px-3 border border-grey-six dark:bg-dark-background-color dark:text-white py-2 rounded overscroll-none"
         >
           <p>Message to Otoz.ai Japan</p>
           <textarea
@@ -2177,6 +2177,246 @@
       </div>
     </footer>
     <!-- Footer Ends here -->
+
+    <!-- Sidebar of Consignee List Starts here -->
+    <div
+      id="sidebarFilterOverlay"
+      class="fixed inset-0 z-50 bg-[#38383880] opacity-0 hidden transition-opacity duration-300"
+      aria-modal="true"
+      role="dialog"
+    >
+      <aside
+        id="sidebarFilter"
+        class="fixed right-0 top-0 h-full w-full max-w-xl bg-white dark:bg-dark-background-color shadow-lg flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out"
+        tabindex="-1"
+        aria-label="All Filters"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-6 py-4 border-b-2 border-[#d9d9d9]"
+        >
+          <h2 class="text-xl font-semibold text-grey-two dark:text-white">
+            Consignee List
+          </h2>
+          <button
+            id="closeSidebarFilter"
+            class="text-4xl cursor-pointer font-normal text-primary-color hover:text-[#c53030] focus:outline-none dark:text-white"
+            aria-label="Close sidebar"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+          <p class="text-grey-two dark:text-dark-grey-four-color px-6 pt-2">
+            Choose From Saved Consignee
+          </p>
+          <section class="px-6 py-3" data-panel="body">
+            <div
+              class="mt-3 border-2 border-grey-seven rounded px-2 pt-2 pb-3 text-grey-two dark:border-dark-grey-six dark:text-dark-grey-four-color"
+            >
+              <div class="flex justify-between flex-wrap">
+                <p class="font-semibold text-lg text-grey-two dark:text-white">
+                  Arturo Franco Souza
+                </p>
+                <button
+                  class="bg-primary-color text-white dark:bg-dark-primary-color border border-primary-color hover:text-grey-two dark:border-dark-primary-color dark:hover:text-dark-primary-color px-4 py-2 text-sm rounded cursor-pointer hover:bg-transparent"
+                >
+                  Copy
+                </button>
+              </div>
+
+              <div class="mt-4 overflow-x-auto w-full">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <tbody
+                    class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four"
+                  >
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="text-sm px-2 py-2 font-normal align-middle border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head border-t border-t-grey-six dark:border-t-dark-grey-six"
+                      >
+                        Unset
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six text-sm border-t border-t-grey-six dark:border-t-dark-grey-six"
+                      ></td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        TIN
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b text-sm border-b-grey-six dark:border-b-dark-grey-six"
+                      ></td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Address
+                      </td>
+
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six font-light text-sm"
+                      >
+                        Paraguay / San Estanislao Sebastian de Yegros N208 c/
+                        calle14
+                      </td>
+                    </tr>
+
+                    <tr class="align-top dark:text-white">
+                      <td
+                        class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                      >
+                        Contacts
+                      </td>
+                      <td
+                        class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six text-sm"
+                      >
+                        <div class="flex flex-col font-light">
+                          <p>TEL(1): +595971451419</p>
+                          <p>TEL(2):</p>
+                          <p>TEL(3):</p>
+                          <p>FAX:</p>
+                          <p>EMAIL: Mcarthur017@hotmail.com</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+            class="mt-3 border-2 border-grey-seven rounded px-2 pt-2 pb-3 text-grey-two dark:border-dark-grey-six dark:text-dark-grey-four-color"
+          >
+            <div class="flex justify-between flex-wrap">
+              <p class="font-semibold text-lg text-grey-two dark:text-white">
+                Arturo Franco Souza
+              </p>
+              <button
+                class="bg-primary-color text-white dark:bg-dark-primary-color border border-primary-color hover:text-grey-two dark:border-dark-primary-color dark:hover:text-dark-primary-color px-4 py-2 text-sm rounded cursor-pointer hover:bg-transparent"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div class="mt-4 overflow-x-auto w-full">
+              <table class="min-w-full divide-y divide-gray-200">
+                <tbody
+                  class="bg-white divide-y divide-gray-200 dark:bg-table-dark-body dark:border dark:border-dark-grey-six dark:divide-grey-four"
+                >
+                  <tr class="align-top dark:text-white">
+                    <td
+                      class="text-sm px-2 py-2 font-normal align-middle border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head border-t border-t-grey-six dark:border-t-dark-grey-six"
+                    >
+                      Unset
+                    </td>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six text-sm border-t border-t-grey-six dark:border-t-dark-grey-six"
+                    ></td>
+                  </tr>
+
+                  <tr class="align-top dark:text-white">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                    >
+                      TIN
+                    </td>
+
+                    <td
+                      class="px-2 py-2 border-b text-sm border-b-grey-six dark:border-b-dark-grey-six"
+                    ></td>
+                  </tr>
+
+                  <tr class="align-top dark:text-white">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                    >
+                      Address
+                    </td>
+
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six font-light text-sm"
+                    >
+                      Paraguay / San Estanislao Sebastian de Yegros N208 c/
+                      calle14
+                    </td>
+                  </tr>
+
+                  <tr class="align-top dark:text-white">
+                    <td
+                      class="px-2 py-2 font-normal align-middle text-sm border-b border-b-grey-six dark:border-b-dark-grey-six bg-[#fafafa] dark:bg-table-dark-head"
+                    >
+                      Contacts
+                    </td>
+                    <td
+                      class="px-2 py-2 border-b border-b-grey-six dark:border-b-dark-grey-six text-sm"
+                    >
+                      <div class="flex flex-col font-light">
+                        <p>TEL(1): +595971451419</p>
+                        <p>TEL(2):</p>
+                        <p>TEL(3):</p>
+                        <p>FAX:</p>
+                        <p>EMAIL: Mcarthur017@hotmail.com</p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Sidebar of Consignee List Ends here -->
   </body>
   <script src="./themeSwitcher.js"></script>
+  <script>
+    // Sidebar open/close logic
+    const downloadStockList = document.getElementById("consigneeList");
+    const sidebarOverlay = document.getElementById("sidebarFilterOverlay");
+    const sidebar = document.getElementById("sidebarFilter");
+    const closeSidebarBtn = document.getElementById("closeSidebarFilter");
+
+    function openSidebar() {
+      sidebarOverlay.classList.remove("hidden");
+
+      requestAnimationFrame(() => {
+        sidebarOverlay.classList.add("opacity-100");
+        sidebar.classList.remove("translate-x-full");
+      });
+      sidebar.focus();
+    }
+
+    function closeSidebar() {
+      sidebarOverlay.classList.remove("opacity-100");
+      sidebar.classList.add("translate-x-full");
+
+      setTimeout(() => {
+        sidebarOverlay.classList.add("hidden");
+      }, 300); // match the Tailwind transition duration
+    }
+
+    downloadStockList.addEventListener("click", openSidebar);
+    closeSidebarBtn.addEventListener("click", closeSidebar);
+
+    // Close sidebar on overlay click
+    sidebarOverlay.addEventListener("click", (e) => {
+      if (e.target === sidebarOverlay) closeSidebar();
+    });
+
+    // Close on Escape key
+    window.addEventListener("keydown", (e) => {
+      if (!sidebarOverlay.classList.contains("hidden") && e.key === "Escape")
+        closeSidebar();
+    });
+  </script>
+  <!-- End Sidebar Filter Modal -->
 </html>
